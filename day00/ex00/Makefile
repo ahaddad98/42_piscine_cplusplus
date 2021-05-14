@@ -1,6 +1,6 @@
 appname := megaphone
 
-CXX := clang++
+CXX := g++
 CXXFLAGS := -Wall -Wextra -Werror
 
 srcfiles := megaphone.cpp
@@ -16,4 +16,4 @@ clean:
 	rm -f $(objects)
 
 fclean: clean
-	rm megaphone
+	rm appname
