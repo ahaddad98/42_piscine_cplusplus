@@ -1,2 +1,2 @@
-# 42_piscine_c-
+# 42_piscine_c++
 learning Cpluspus.
