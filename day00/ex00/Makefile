@@ -1,19 +1,18 @@
-appname := megaphone
+NAME= megaphone
 
-CXX := g++
-CXXFLAGS := -Wall -Wextra -Werror
+FLAGS= -Wall -Wextra -Werror
 
-srcfiles := megaphone.cpp
-objects  := $(patsubst %.C, %.o, $(srcfiles))
+COMP= g++
 
-all: $(appname)
+all: $(NAME) 
 
-$(appname): $(objects)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $(appname) $(objects) $(LDLIBS)
+$(NAME) : megaphone.cpp
+	@$(COMP) megaphone.cpp -o $@
+	@echo " Made by : \033[1;91mAhaddad\033[m"
+# clean:
+	# @rm megaphone.o
+fclean:
+	@rm -rf $(NAME)
+	@echo "all objects are deleted." 
 
-
-clean:
-	rm -f $(objects)
-
-fclean: clean
-	rm appname
+re : fclean all
