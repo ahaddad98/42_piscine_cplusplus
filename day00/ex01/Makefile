@@ -9,7 +9,9 @@ HDR= $(addprefix $(HDR_PATH)/,$(HDR_NAME))
 
 H_FLAG= -I $(HDR_PATH)
 
-COMP= clang++
+COMP= g++
+
+# COMP= clang++
 
 all: $(NAME) 
 

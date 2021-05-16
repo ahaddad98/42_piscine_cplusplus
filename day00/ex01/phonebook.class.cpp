@@ -57,12 +57,17 @@ int which_action(char *action1)
 void    Phonebook::search(Phonebook *ph_book, int i)
 {
     int j = 0;
-    
+    int index;
     // i--;
     while (j < i)
     {
         std::cout << j + 1 << " | " << ph_book[j].first_name << " | " << ph_book[j].last_name <<" | " << ph_book[j].nickname << "\n";
         j++;
+    }
+    std::cin >> index;
+    if (index >0 && index < i)
+    {
+        std::cout << index << " | " << ph_book[index-1].first_name << " | " << ph_book[index-1].last_name <<" | " << ph_book[index-1].nickname << "\n";
     }
 }
 // Phonebook::Phonebook(void)

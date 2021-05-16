@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 14:50:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/16 16:39:28 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/16 23:19:51 by amine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main()
     int i = 0;
     int check;
     char action1[10];
+    int index = -1;
     while (1)
     {
         check = which_action(action1);
@@ -28,7 +29,9 @@ int main()
                 ph_book[i].init_args(&ph_book[i]);
             }
             if (check == 2)
+            {
                 ph_book->search(ph_book, i);
+            }
             if (check == 3)
                 exit(0);
             if (check == 1)
