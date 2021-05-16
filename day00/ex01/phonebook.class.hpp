@@ -13,7 +13,9 @@
 #ifndef PHONEBOOK_CLASS_H
 # define PHONEBOOK_CLASS_H
 # include <iostream>
+# include <cstring>
 using namespace std;
+int which_action(char *actoin1);
 class Phonebook
 {
 public:
@@ -26,9 +28,11 @@ public:
 	string favorite_meal;
 	string underwear_color;
 	string darkest_secret;
-	int	postal_adress;
-	int	phone_number;
-	int	birthday_date;
+	string	postal_adress;
+	string	phone_number;
+	string	birthday_date;
+	string	action;
+	char	action1[10];
 	int		check;
 	void init_args(Phonebook *ph_book);
 };
