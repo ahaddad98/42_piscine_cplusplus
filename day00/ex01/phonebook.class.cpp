@@ -16,8 +16,7 @@
 
 void Phonebook::init_args(Phonebook *ph_book)
 {
-    std::string p;
-    getline(std::cin, p);
+    std::cin.ignore();
     std::cout << "donnez first name " << std::endl;
     getline(std::cin, ph_book->first_name);
     std::cout << "donnez last name \n";
