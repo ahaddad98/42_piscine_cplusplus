@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 14:50:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/16 13:48:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/16 16:39:28 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    Phonebook ph_book[8];
+    Phonebook *ph_book = new Phonebook[8];
     int i = 0;
     int check;
     char action1[10];
@@ -24,23 +24,28 @@ int main()
         if (i < 8)
         {
             if (check == 1)
+            {
                 ph_book[i].init_args(&ph_book[i]);
+            }
+            if (check == 2)
+                ph_book->search(ph_book, i);
             if (check == 3)
                 exit(0);
-            i++;
+            if (check == 1)
+                i++;
         }
         if (i >= 8)
-            cout << "you can't add more than 8\n";
+            std::cout << "you can't add more than 8\n";
     }
-    // cout << ph_book.last_name << "\n";
-    // cout << ph_book.nickname << "\n";
-    // cout << ph_book.login << "\n";
-    // cout << ph_book.email_adress << "\n";
-    // cout << ph_book.favorite_meal << "\n";
-    // cout << ph_book.underwear_color << "\n";
-    // cout << ph_book.darkest_secret << "\n";
-    // cout << ph_book.postal_adress << "\n";
-    // cout << ph_book.phone_number << "\n";
-    // cout << ph_book.birthday_date << "\n";
+            // std::cout << ph_book[i].last_name << "\n";
+            // std::cout << ph_book[i].nickname << "\n";
+            // std::cout << ph_book[i].login << "\n";
+            // std::cout << ph_book[i].email_adress << "\n";
+            // std::cout << ph_book[i].favorite_meal << "\n";
+            // std::cout << ph_book[i].underwear_color << "\n";
+            // std::cout << ph_book[i].darkest_secret << "\n";
+            // std::cout << ph_book[i].postal_adress << "\n";
+            // std::cout << ph_book[i].phone_number << "\n";
+            // std::cout << ph_book[i].birthday_date << "\n";
     return 0;
 }

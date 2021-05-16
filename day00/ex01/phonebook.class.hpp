@@ -14,26 +14,27 @@
 # define PHONEBOOK_CLASS_H
 # include <iostream>
 # include <cstring>
-using namespace std;
+// using namespace std;
 int which_action(char *actoin1);
 class Phonebook
 {
 public:
 
-	string first_name;
-	string last_name;
-	string nickname;
-	string login;
-	string email_adress;
-	string favorite_meal;
-	string underwear_color;
-	string darkest_secret;
-	string	postal_adress;
-	string	phone_number;
-	string	birthday_date;
-	string	action;
+	std::string first_name;
+	std::string last_name;
+	std::string nickname;
+	std::string login;
+	std::string email_adress;
+	std::string favorite_meal;
+	std::string underwear_color;
+	std::string darkest_secret;
+	std::string	postal_adress;
+	std::string	phone_number;
+	std::string	birthday_date;
+	std::string	action;
 	char	action1[10];
 	int		check;
+	void search(Phonebook *ph_book, int i);
 	void init_args(Phonebook *ph_book);
 };
 

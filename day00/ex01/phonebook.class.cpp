@@ -11,38 +11,41 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <unistd.h>
 #include "phonebook.class.hpp"
 
-void	Phonebook::init_args(Phonebook *ph_book)
+void Phonebook::init_args(Phonebook *ph_book)
 {
-	cout << "donnez first name \n";
-    getline(cin, ph_book->first_name);
-    cout << "donnez last name \n";
-    getline(cin, ph_book->last_name);
-    cout << "donnez nickname \n";
-    getline(cin, ph_book->nickname);
-    cout << "donnez login \n";
-    getline(cin, ph_book->login);
-    cout << "donnez email adress \n";
-    getline(cin, ph_book->email_adress);
-    cout << "donnez favorite meal \n";
-    getline(cin, ph_book->favorite_meal);
-    cout << "donnez underwear color\n";
-    getline(cin, ph_book->underwear_color);
-    cout << "donnez darkest scret\n";
-    getline(cin, ph_book->darkest_secret);
-    cout << "donnez postal adress\n";
-    getline(cin, ph_book->postal_adress);
-    cout << "donnez phone number\n";
-    getline(cin, ph_book->phone_number);
-    cout << "donnez birthday date\n";
-    getline(cin, ph_book->birthday_date);
+    std::string p;
+    getline(std::cin, p);
+    std::cout << "donnez first name " << std::endl;
+    getline(std::cin, ph_book->first_name);
+    std::cout << "donnez last name \n";
+    getline(std::cin, ph_book->last_name);
+    std::cout << "donnez nickname \n";
+    getline(std::cin, ph_book->nickname);
+    std::cout << "donnez login \n";
+    getline(std::cin, ph_book->login);
+    std::cout << "donnez email adress \n";
+    getline(std::cin, ph_book->email_adress);
+    std::cout << "donnez favorite meal \n";
+    getline(std::cin, ph_book->favorite_meal);
+    std::cout << "donnez underwear color\n";
+    getline(std::cin, ph_book->underwear_color);
+    std::cout << "donnez darkest scret\n";
+    getline(std::cin, ph_book->darkest_secret);
+    std::cout << "donnez postal adress\n";
+    getline(std::cin, ph_book->postal_adress);
+    std::cout << "donnez phone number\n";
+    getline(std::cin, ph_book->phone_number);
+    std::cout << "donnez birthday date\n";
+    getline(std::cin, ph_book->birthday_date);
 }
 
-int    which_action(char *action1)
+int which_action(char *action1)
 {
     int check = 0;
-    cin >> action1;
+    std::cin >> action1;
     if (strcmp(action1, "ADD") == 0)
         check = 1;
     if (strcmp(action1, "SEARCH") == 0)
@@ -52,6 +55,17 @@ int    which_action(char *action1)
     return (check);
 }
 
+void    Phonebook::search(Phonebook *ph_book, int i)
+{
+    int j = 0;
+    
+    // i--;
+    while (j < i)
+    {
+        std::cout << j + 1 << " | " << ph_book[j].first_name << " | " << ph_book[j].last_name <<" | " << ph_book[j].nickname << "\n";
+        j++;
+    }
+}
 // Phonebook::Phonebook(void)
 // {
 // 	// std::cout << "lazemna l3a9a" << std::endl;
