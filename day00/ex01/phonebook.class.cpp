@@ -85,6 +85,7 @@ void Phonebook::search(Phonebook *ph_book, int i)
     int j = 0;
     std::string  index;
     int k = -1;
+    char c;
     if (i == 0)
         std::cout << "Data not found" << std::endl;
     while (j < i)
@@ -104,25 +105,28 @@ void Phonebook::search(Phonebook *ph_book, int i)
         std::cin >> index;
         if (index.size() == 1)
         {
-            k = std::stoi(index);
-            std::cout << k << "\n";
-            if (k > 0 && k < (i+1))
+            c = index[0];
+            if (c >= '0' && c <= '9')
             {
-                std::cout << YELLOW <<"First name       : " <<ph_book[k - 1].last_name << "\n" <<  WHITE ;
-                std::cout << YELLOW <<"Last name        : " <<ph_book[k - 1].nickname << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Nickname         : " <<ph_book[k - 1].login << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Email adress     : " <<ph_book[k - 1].email_adress << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Favorite_meal    : " <<ph_book[k - 1].favorite_meal << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Underwear_color  : " <<ph_book[k - 1].underwear_color << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Darkest_secret   : " <<ph_book[k - 1].darkest_secret << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Postal_adress    : " <<ph_book[k - 1].postal_adress << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Phone_number     : " <<ph_book[k - 1].phone_number << "\n" <<  WHITE;
-                std::cout << YELLOW <<"Birthday_date    : " <<ph_book[k - 1].birthday_date << "\n" <<  WHITE;
+                k = std::stoi(index);
+                if (k > 0 && k < (i + 1))
+                {
+                    std::cout << YELLOW <<"First name       : " <<ph_book[k - 1].last_name << "\n" <<  WHITE ;
+                    std::cout << YELLOW <<"Last name        : " <<ph_book[k - 1].nickname << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Nickname         : " <<ph_book[k - 1].login << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Email adress     : " <<ph_book[k - 1].email_adress << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Favorite_meal    : " <<ph_book[k - 1].favorite_meal << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Underwear_color  : " <<ph_book[k - 1].underwear_color << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Darkest_secret   : " <<ph_book[k - 1].darkest_secret << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Postal_adress    : " <<ph_book[k - 1].postal_adress << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Phone_number     : " <<ph_book[k - 1].phone_number << "\n" <<  WHITE;
+                    std::cout << YELLOW <<"Birthday_date    : " <<ph_book[k - 1].birthday_date << "\n" <<  WHITE;
+                }
             }
+            else if (k <= 0 || k > (i + 1))
+                std::cout << "index not found\n";
         }
-        else if (k <= 0 || k > (i + 1))
-        {
+        else
             std::cout << "index not found\n";
-        }
     }
 }
