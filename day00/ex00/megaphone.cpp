@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:11:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/17 17:59:37 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/17 18:03:41 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int main(int ac , char **av)
             i++;
         }
     }
-    std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+    else
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     std::cout << std::endl;
     return 0;
 }
