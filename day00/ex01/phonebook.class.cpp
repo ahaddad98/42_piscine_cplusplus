@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "phonebook.class.hpp"
+#include <iomanip>
 
 void Phonebook::init_args(Phonebook *ph_book)
 {
@@ -52,33 +53,71 @@ int which_action(char *action1)
     return (check);
 }
 
+void    print(std::string str)
+{
+    int i = 0;
+    int size = 0;
+    size = str.size();
+    if (size > 9)
+    {
+        while (i < 9)
+        {
+            std::cout << str[i];
+            i++;
+        }
+        std::cout << "." ;
+    }
+    else
+    {
+        std::cout << std::setw(10);
+        std::cout << str ;
+    }
+}
+
 void Phonebook::search(Phonebook *ph_book, int i)
 {
     int j = 0;
-    char  index[10];
+    std::string  index;
     int k = -1;
+    if (i == 0)
+        std::cout << "data not found" << std::endl;
     while (j < i)
     {
-        std::cout << j + 1 << " | " << ph_book[j].first_name << " | " << ph_book[j].last_name << " | " << ph_book[j].nickname << "\n";
+        std::cout << std::setw(10);
+        std::cout << j + 1 << "|" ;
+        print(ph_book[j].first_name);
+        std::cout << "|";
+        print(ph_book[j].last_name);
+        std::cout << "|";
+        print(ph_book[j].nickname);
+        std::cout << "|";
+        std::cout << std::endl;
         j++;
     }
-    std::cin >> index;
-    k = std::atoi(index);
-    if (k > 0 && k < (i+1))
+    if (i != 0)
     {
-        std::cout << ph_book[k - 1].last_name << "\n";
-        std::cout << ph_book[k - 1].nickname << "\n";
-        std::cout << ph_book[k - 1].login << "\n";
-        std::cout << ph_book[k - 1].email_adress << "\n";
-        std::cout << ph_book[k - 1].favorite_meal << "\n";
-        std::cout << ph_book[k - 1].underwear_color << "\n";
-        std::cout << ph_book[k - 1].darkest_secret << "\n";
-        std::cout << ph_book[k - 1].postal_adress << "\n";
-        std::cout << ph_book[k - 1].phone_number << "\n";
-        std::cout << ph_book[k - 1].birthday_date << "\n";
-    }
-    else if (k <= 0 || k > (i + 1))
-    {
-        std::cout << "index not found\n";
+        std::cin >> index;
+        if (index.size() == 1)
+        {
+            k = std::stoi(index);
+            std::cout << k << "\n";
+            if (k > 0 && k < (i+1))
+            {
+                std::cout << ph_book[k - 1].last_name << "\n";
+                std::cout << ph_book[k - 1].nickname << "\n";
+                std::cout << ph_book[k - 1].login << "\n";
+                std::cout << ph_book[k - 1].email_adress << "\n";
+                std::cout << ph_book[k - 1].favorite_meal << "\n";
+                std::cout << ph_book[k - 1].underwear_color << "\n";
+                std::cout << ph_book[k - 1].darkest_secret << "\n";
+                std::cout << ph_book[k - 1].postal_adress << "\n";
+                std::cout << ph_book[k - 1].phone_number << "\n";
+                std::cout << ph_book[k - 1].birthday_date << "\n";
+            }
+        }
+        else if (k <= 0 || k > (i + 1))
+        {
+            std::cout << "index not found\n";
+        }
     }
 }

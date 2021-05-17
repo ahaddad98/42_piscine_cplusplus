@@ -15,10 +15,12 @@
 # include <iostream>
 # include <cstring>
 
-int which_action(char *actoin1);
+int		which_action(char *actoin1);
+void    print(std::string *str);
+
 class Phonebook
 {
-public:
+private:
 
 	std::string first_name;
 	std::string last_name;
@@ -32,10 +34,13 @@ public:
 	std::string	phone_number;
 	std::string	birthday_date;
 	std::string	action;
-	char	action1[10];
-	int		check;
-	void search(Phonebook *ph_book, int i);
-	void init_args(Phonebook *ph_book);
+	char		action1[10];
+	int			check;
+
+public:
+
+	void 		search(Phonebook *ph_book, int i);
+	void		init_args(Phonebook *ph_book);
 };
-          
+
 #endif

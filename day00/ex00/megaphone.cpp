@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:11:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/17 14:20:42 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/17 14:22:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 int main(int ac , char **av)
 {
-    // std::string s;
     int i = 1;
     int j = 0;
-    // getline(std::cin, s);
     while (av[i])
     {
         while (av[i][j])
