@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <unistd.h>
 #include "phonebook.class.hpp"
 
 void Phonebook::init_args(Phonebook *ph_book)
@@ -54,30 +52,33 @@ int which_action(char *action1)
     return (check);
 }
 
-void    Phonebook::search(Phonebook *ph_book, int i)
+void Phonebook::search(Phonebook *ph_book, int i)
 {
     int j = 0;
-    int index;
-    // i--;
+    char  index[10];
+    int k = -1;
     while (j < i)
     {
-        std::cout << j + 1 << " | " << ph_book[j].first_name << " | " << ph_book[j].last_name <<" | " << ph_book[j].nickname << "\n";
+        std::cout << j + 1 << " | " << ph_book[j].first_name << " | " << ph_book[j].last_name << " | " << ph_book[j].nickname << "\n";
         j++;
     }
     std::cin >> index;
-    if (index >0 && index < i)
+    k = std::atoi(index);
+    if (k > 0 && k < (i+1))
     {
-        std::cout << index << " | " << ph_book[index-1].first_name << " | " << ph_book[index-1].last_name <<" | " << ph_book[index-1].nickname << "\n";
+        std::cout << ph_book[k - 1].last_name << "\n";
+        std::cout << ph_book[k - 1].nickname << "\n";
+        std::cout << ph_book[k - 1].login << "\n";
+        std::cout << ph_book[k - 1].email_adress << "\n";
+        std::cout << ph_book[k - 1].favorite_meal << "\n";
+        std::cout << ph_book[k - 1].underwear_color << "\n";
+        std::cout << ph_book[k - 1].darkest_secret << "\n";
+        std::cout << ph_book[k - 1].postal_adress << "\n";
+        std::cout << ph_book[k - 1].phone_number << "\n";
+        std::cout << ph_book[k - 1].birthday_date << "\n";
+    }
+    else if (k <= 0 || k > (i + 1))
+    {
+        std::cout << "index not found\n";
     }
 }
-// Phonebook::Phonebook(void)
-// {
-// 	// std::cout << "lazemna l3a9a" << std::endl;
-// 	return;
-// }
-
-// Phonebook::~Phonebook(void)
-// {
-// 	// std::cout << "waaaaaaa waaaa waaa l3aa9aa" << std::endl;
-// 	return;
-// }

@@ -1,19 +1,39 @@
-#include <iostream>
-using namespace std;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/17 14:11:30 by ahaddad           #+#    #+#             */
+/*   Updated: 2021/05/17 14:20:42 by ahaddad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main()
+#include <iostream>
+
+int main(int ac , char **av)
 {
-    string s;
-    int i  = 0;
-    getline(cin, s);
-    while (s[i])
+    // std::string s;
+    int i = 1;
+    int j = 0;
+    // getline(std::cin, s);
+    while (av[i])
     {
-        if (s[i] >= 97 && s[i] <= 122)
-            s[i] = s[i] - 32;
+        while (av[i][j])
+        {
+            if (av[i][j] >= 97 && av[i][j] <= 122)
+                av[i][j] = av[i][j] - 32;
+            j++;
+        }
         i++;
     }
-    // if (i == 0)
-    //     cout << "\n";
-    cout << s << "\n";
+    i = 1;
+    while (av[i])
+    {
+        std::cout << av[i];
+        i++;
+    }
+    std::cout << std::endl;
     return 0;
 }

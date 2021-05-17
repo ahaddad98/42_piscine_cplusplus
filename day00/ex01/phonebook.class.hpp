@@ -14,7 +14,7 @@
 # define PHONEBOOK_CLASS_H
 # include <iostream>
 # include <cstring>
-// using namespace std;
+
 int which_action(char *actoin1);
 class Phonebook
 {
@@ -37,5 +37,5 @@ public:
 	void search(Phonebook *ph_book, int i);
 	void init_args(Phonebook *ph_book);
 };
-
+          
 #endif

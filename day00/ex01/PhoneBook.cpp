@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 14:50:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/16 23:19:51 by amine            ###   ########.fr       */
+/*   Updated: 2021/05/17 14:05:32 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main()
     int check;
     char action1[10];
     int index = -1;
+
     while (1)
     {
         check = which_action(action1);
@@ -33,22 +34,15 @@ int main()
                 ph_book->search(ph_book, i);
             }
             if (check == 3)
+            {
+                delete[] ph_book;
                 exit(0);
+            }
             if (check == 1)
                 i++;
         }
         if (i >= 8)
             std::cout << "you can't add more than 8\n";
     }
-            // std::cout << ph_book[i].last_name << "\n";
-            // std::cout << ph_book[i].nickname << "\n";
-            // std::cout << ph_book[i].login << "\n";
-            // std::cout << ph_book[i].email_adress << "\n";
-            // std::cout << ph_book[i].favorite_meal << "\n";
-            // std::cout << ph_book[i].underwear_color << "\n";
-            // std::cout << ph_book[i].darkest_secret << "\n";
-            // std::cout << ph_book[i].postal_adress << "\n";
-            // std::cout << ph_book[i].phone_number << "\n";
-            // std::cout << ph_book[i].birthday_date << "\n";
     return 0;
 }
