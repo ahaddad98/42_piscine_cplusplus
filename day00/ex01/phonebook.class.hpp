@@ -15,7 +15,7 @@
 # include <iostream>
 # include <cstring>
 
-int		which_action(char *actoin1);
+int		which_action(std::string actoin1);
 void    print(std::string *str);
 
 class Phonebook
@@ -34,7 +34,7 @@ private:
 	std::string	phone_number;
 	std::string	birthday_date;
 	std::string	action;
-	char		action1[10];
+	char		action1[100];
 	int			check;
 
 public:

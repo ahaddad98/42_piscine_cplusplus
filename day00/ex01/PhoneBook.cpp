@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 14:50:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/17 14:05:32 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/18 16:22:45 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
     Phonebook *ph_book = new Phonebook[8];
     int i = 0;
     int check;
-    char action1[10];
+    std::string action1;
     int index = -1;
 
     while (1)

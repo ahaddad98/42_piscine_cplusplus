@@ -46,15 +46,15 @@ void Phonebook::init_args(Phonebook *ph_book)
     getline(std::cin, ph_book->birthday_date);
 }
 
-int which_action(char *action1)
+int which_action(std::string action1)
 {
     int check = 0;
-    std::cin >> action1;
-    if (strcmp(action1, "ADD") == 0)
+    getline(std::cin, action1);
+    if (action1 == "ADD")
         check = 1;
-    if (strcmp(action1, "SEARCH") == 0)
+    if (action1 == "SEARCH")
         check = 2;
-    if (strcmp(action1, "EXIT") == 0)
+    if (action1 ==  "EXIT")
         check = 3;
     return (check);
 }

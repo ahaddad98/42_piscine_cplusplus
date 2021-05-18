@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:11:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/17 18:03:41 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/18 16:25:27 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int main(int ac , char **av)
 {
     int i = 1;
-    int j = 0;
+    int j;
+
     if (ac > 1)
     {
         while (av[i])
         {
+            j = 0;
             while (av[i][j])
             {
                 if (av[i][j] >= 97 && av[i][j] <= 122)
