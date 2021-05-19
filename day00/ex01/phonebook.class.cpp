@@ -13,85 +13,82 @@
 #include "phonebook.class.hpp"
 #include <iomanip>
 
-#define RESET   "\033[0m"
-#define RED     "\033[31m"      /* Red */
-#define GREEN   "\033[32m"      /* Green */
-#define YELLOW  "\033[33m"      /* Yellow */
-#define WHITE   "\033[37m"      /* White */
-
 void Phonebook::init_args(Phonebook *ph_book)
 {
     std::cin.ignore();
-    std::cout << RED <<"First name " << WHITE << std::endl;
+    std::cout << "First name " << std::endl;
     getline(std::cin, ph_book->first_name);
-    std::cout << RED << "Last name \n"  << WHITE ;
+    std::cout << "Last name \n";
     getline(std::cin, ph_book->last_name);
-    std::cout << RED << "Nickname \n" <<  WHITE;
+    std::cout << "Nickname \n";
     getline(std::cin, ph_book->nickname);
-    std::cout << RED << "Login \n" <<  WHITE;
+    std::cout << "Login \n";
     getline(std::cin, ph_book->login);
-    std::cout << RED << "Email adress \n" <<  WHITE;
+    std::cout << "Email adress \n";
     getline(std::cin, ph_book->email_adress);
-    std::cout << RED << "Favorite meal \n" <<  WHITE ;
+    std::cout << "Favorite meal \n";
     getline(std::cin, ph_book->favorite_meal);
-    std::cout << RED << "Underwear color\n" <<  WHITE ;
+    std::cout << "Underwear color\n";
     getline(std::cin, ph_book->underwear_color);
-    std::cout << RED << "Darkest scret\n" <<  WHITE ;
+    std::cout << "Darkest scret\n";
     getline(std::cin, ph_book->darkest_secret);
-    std::cout << RED << "Postal adress\n" <<  WHITE ;
+    std::cout << "Postal adress\n";
     getline(std::cin, ph_book->postal_adress);
-    std::cout << RED << "Phone number\n" <<  WHITE ;
+    std::cout << "Phone number\n";
     getline(std::cin, ph_book->phone_number);
-    std::cout << RED << "Birthday date\n" <<  WHITE ;
+    std::cout << "Birthday date\n";
     getline(std::cin, ph_book->birthday_date);
 }
 
 int which_action(std::string action1)
 {
     int check = 0;
-    getline(std::cin, action1);
-    if (action1 == "ADD")
+    std::cin >> action1;
+    if (action1.compare("ADD") == 0)
         check = 1;
-    if (action1 == "SEARCH")
+    if (action1.compare("SEARCH") == 0)
         check = 2;
-    if (action1 ==  "EXIT")
+    if (action1.compare("EXIT") == 0)
+    {
         check = 3;
+        // std::cout << "amine haddad\n";
+    }
     return (check);
 }
 
-void    print(std::string str)
+void print(std::string str)
 {
     int i = 0;
     int size = 0;
     size = str.size();
     if (size > 9)
     {
+        // std::cout << std::setw(10);
         while (i < 9)
         {
-            std::cout << GREEN <<str[i] << WHITE;
+            std::cout << str[i];
             i++;
         }
-        std::cout << GREEN << "." << WHITE;
+        std::cout << ".";
     }
     else
     {
         std::cout << std::setw(10);
-        std::cout << GREEN << str << WHITE;
+        std::cout << str;
     }
 }
 
 void Phonebook::search(Phonebook *ph_book, int i)
 {
     int j = 0;
-    std::string  index;
+    std::string index;
     int k = -1;
-    char c;
     if (i == 0)
         std::cout << "Data not found" << std::endl;
     while (j < i)
     {
         std::cout << std::setw(10);
-        std::cout << GREEN <<j + 1 << WHITE << "|" ;
+        std::cout << j + 1 << "|";
         print(ph_book[j].first_name);
         std::cout << "|";
         print(ph_book[j].last_name);
@@ -103,28 +100,30 @@ void Phonebook::search(Phonebook *ph_book, int i)
     if (i != 0)
     {
         std::cin >> index;
-        if (index.size() == 1)
+        if (index.length() == 1)
         {
-            c = index[0];
-            if (c >= '0' && c <= '9')
+            if (isdigit(index[0]))
             {
                 k = std::stoi(index);
                 if (k > 0 && k < (i + 1))
                 {
-                    std::cout << YELLOW <<"First name       : " <<ph_book[k - 1].last_name << "\n" <<  WHITE ;
-                    std::cout << YELLOW <<"Last name        : " <<ph_book[k - 1].nickname << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Nickname         : " <<ph_book[k - 1].login << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Email adress     : " <<ph_book[k - 1].email_adress << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Favorite_meal    : " <<ph_book[k - 1].favorite_meal << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Underwear_color  : " <<ph_book[k - 1].underwear_color << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Darkest_secret   : " <<ph_book[k - 1].darkest_secret << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Postal_adress    : " <<ph_book[k - 1].postal_adress << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Phone_number     : " <<ph_book[k - 1].phone_number << "\n" <<  WHITE;
-                    std::cout << YELLOW <<"Birthday_date    : " <<ph_book[k - 1].birthday_date << "\n" <<  WHITE;
+                    std::cout << "First name       : " << ph_book[k - 1].last_name << "\n";
+                    std::cout << "Last name        : " << ph_book[k - 1].nickname << "\n";
+                    std::cout << "Nickname         : " << ph_book[k - 1].login << "\n";
+                    std::cout << "Email adress     : " << ph_book[k - 1].email_adress << "\n";
+                    std::cout << "Favorite_meal    : " << ph_book[k - 1].favorite_meal << "\n";
+                    std::cout << "Underwear_color  : " << ph_book[k - 1].underwear_color << "\n";
+                    std::cout << "Darkest_secret   : " << ph_book[k - 1].darkest_secret << "\n";
+                    std::cout << "Postal_adress    : " << ph_book[k - 1].postal_adress << "\n";
+                    std::cout << "Phone_number     : " << ph_book[k - 1].phone_number << "\n";
+                    std::cout << "Birthday_date    : " << ph_book[k - 1].birthday_date << "\n";
                 }
+                else if (k <= 0 || k >= (i + 1))
+                    std::cout << "index not found\n";
             }
-            else if (k <= 0 || k > (i + 1))
+            else
                 std::cout << "index not found\n";
+
         }
         else
             std::cout << "index not found\n";
