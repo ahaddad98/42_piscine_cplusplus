@@ -24,7 +24,7 @@ void ponyOnTheHeap()
     delete pony;
     std::cout << "im form the heap\n";
 }
-
+    
 int main()
 {
     ponyOnTheStack();
