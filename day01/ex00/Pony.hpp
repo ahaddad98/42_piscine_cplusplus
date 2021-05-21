@@ -17,13 +17,12 @@
 class Pony
 {
     private:
-        std::string test;
-        
+        std::string name;
+        int age;
+        std::string color;
 
     public:
-        void    amine(void);
-        void    ponyOnTheStack(Pony *pony);
-        void    ponyOnTheHeap(Pony *pont);
+        Pony(std::string name, int age, std::string color);
 };
 
 #endif

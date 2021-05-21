@@ -12,9 +12,22 @@
 
 #include "Pony.hpp"
 
+void ponyOnTheStack()
+{
+    Pony Pony("jack", 3, "green");
+    std::cout << "im form the stack\n";
+}
+
+void ponyOnTheHeap()
+{
+    Pony *pony = new Pony("ray", 2, "brown");
+    delete pony;
+    std::cout << "im form the heap\n";
+}
+
 int main()
 {
-    Pony pony;
-    pony.amine();
+    ponyOnTheStack();
+    ponyOnTheHeap();
     return (0);
 }

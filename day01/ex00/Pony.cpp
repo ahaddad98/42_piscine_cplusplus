@@ -12,11 +12,12 @@
 
 #include "Pony.hpp"
 
-void Pony::amine()
+Pony::Pony(std::string name, int age, std::string color)
 {
-    std::cout << "amine haddad\n";
-}
-
-void Pony::ponyOnTheHeap(Pony *pony)
-{
+    this->name = name;
+    this->age = age;
+    this->color = color;
+    std::cout << this->name << std::endl;
+    std::cout << this->age << std::endl;
+    std::cout << this->color << std::endl;
 }
