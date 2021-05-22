@@ -51,7 +51,6 @@ int which_action(std::string action1)
     if (action1.compare("EXIT") == 0)
     {
         check = 3;
-        // std::cout << "amine haddad\n";
     }
     return (check);
 }
@@ -61,10 +60,9 @@ void print(std::string str)
     int i = 0;
     int size = 0;
     size = str.size();
-    if (size > 9)
+    if (size > 10)
     {
-        // std::cout << std::setw(10);
-        while (i < 9)
+        while (i < 10)
         {
             std::cout << str[i];
             i++;
@@ -73,7 +71,7 @@ void print(std::string str)
     }
     else
     {
-        std::cout << std::setw(10);
+        std::cout << std::setw(11);
         std::cout << str;
     }
 }
@@ -87,7 +85,8 @@ void Phonebook::search(Phonebook *ph_book, int i)
         std::cout << "Data not found" << std::endl;
     while (j < i)
     {
-        std::cout << std::setw(10);
+        std::cout << "      index| First name|  Last name|   nickname" << std::endl;
+        std::cout << std::setw(11);
         std::cout << j + 1 << "|";
         print(ph_book[j].first_name);
         std::cout << "|";

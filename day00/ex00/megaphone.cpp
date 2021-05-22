@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:11:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/18 16:25:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/22 14:44:29 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int main(int ac , char **av)
         while (av[i])
         {
             std::cout << av[i];
+            if (i != ac -1)
+                std::cout << " ";
             i++;
         }
     }

@@ -20,7 +20,7 @@ COMP= clang++
 all: $(NAME) 
 
 $(NAME) : $(SRC_NAME)
-	@$(COMP) $(SRC_NAME) -o $@
+	@$(COMP) $(FLAGS) $(SRC_NAME) -o $@
 	@echo " Made by : \033[1;91mAhaddad\033[m"
 
 fclean:
