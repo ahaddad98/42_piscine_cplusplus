@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:22:01 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/22 18:37:14 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:13:41 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,11 @@
 class ZombieEvent
 {
 private:
-    /* data */
+    
 public:
-    ZombieEvent(/* args */);
-    ~ZombieEvent();
+    
 };
 
-ZombieEvent::ZombieEvent(/* args */)
-{
-}
-
-ZombieEvent::~ZombieEvent()
-{
-}
 
 
 #endif
