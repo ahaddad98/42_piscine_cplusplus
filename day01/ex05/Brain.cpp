@@ -6,8 +6,18 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:49 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 19:33:36 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/24 21:46:39 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
+
+Brain::Brain()
+{
+    
+}
+
+Brain    *Brain::identify()
+{
+    return this;
+}

@@ -6,29 +6,23 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:59 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 19:34:04 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/24 21:51:18 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef HUMAN_H
+#ifndef HUMAN_H
 # define HUMAN_H
-# include "iostream"
+# include <iostream>
+# include "Brain.hpp"
+
 class Human
 {
 private:
-    /* data */
+    Brain const brain;
 public:
-    Human(/* args */);
-    ~Human();
+    Brain const getbrain();
+    Human();
+    Brain const *identify();
 };
-
-Human::Human(/* args */)
-{
-}
-
-Human::~Human()
-{
-}
-
 
 #endif

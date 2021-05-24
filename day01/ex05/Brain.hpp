@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:54 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 19:34:11 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/24 21:46:21 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,13 @@
 class Brain
 {
 private:
-    /* data */
+    // unsigned int water;
+    
 public:
-    Brain(/* args */);
-    ~Brain();
+    Brain();
+    Brain    *identify();
+    // ~Brain();
 };
-
-Brain::Brain(/* args */)
-{
-}
-
-Brain::~Brain()
-{
-}
 
 
 #endif

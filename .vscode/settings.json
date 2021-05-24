@@ -61,5 +61,6 @@
         "vector": "cpp",
         "iomanip": "cpp",
         "bit": "cpp"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }
