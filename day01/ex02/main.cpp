@@ -6,21 +6,38 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:21:50 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/23 15:14:24 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/24 14:23:09 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ZombieEvent.hpp"
+#include <cstdlib>
+#include <ctime>
 
-Zombie *newZomnie(std::string name)
+Zombie *ZombieEvent::newZombie(std::string name)
 {
-    
+    Zombie *zombie = new Zombie();
+    zombie->setname(name);
+    zombie->settype(ZombieType);
+    zombie->announce();
+    return zombie;
+}
+
+void    randomChump()
+{
+    Zombie zombie;
+    srand(time(0));
+    std::string first[3] = {"Zombie one ","Zombie two ","Zombie three"};
+    zombie.setname(first[rand() % 3]);
+    zombie.settype("type 2");
+    zombie.announce();
 }
 
 int main()
 {
     Zombie zombie;
-    zombie.setname("amine");
-    zombie.settype("sahbi zouhair");
-    zombie.announce();
+    ZombieEvent zombieevent;
+    zombieevent.setZombieType("type1");
+    zombie = *zombieevent.newZombie("amine");
+    randomChump();
 }
