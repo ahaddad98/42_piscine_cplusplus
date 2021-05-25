@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:59 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/25 14:02:20 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/25 14:03:55 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <iostream>
 # include "Brain.hpp"
 # include <sstream>
+
 class Human
 {
 private:
