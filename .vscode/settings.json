@@ -60,7 +60,8 @@
         "utility": "cpp",
         "vector": "cpp",
         "iomanip": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "fstream": "cpp"
     },
     "C_Cpp.dimInactiveRegions": false
 }
