@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:32:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 21:48:09 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/25 14:02:11 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 
 int main()
 {
-    // Brain brain;
     Human human;
 
     std::cout << human.identify() << std::endl;
-// std::cout << human.getBrain().identify() << std::endl;
-    // std::cout << brain.identify() << std::endl;
-    // std::cout << human->identify(&brain) << std::endl;
-    
+    std::cout << human.getbrain().identify() << std::endl;
 }

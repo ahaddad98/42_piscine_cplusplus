@@ -6,18 +6,21 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:49 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 21:46:39 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/25 13:58:09 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
-
+#include <sstream>
 Brain::Brain()
 {
-    
 }
 
-Brain    *Brain::identify()
+std::string   Brain::identify() const
 {
-    return this;
+    std::stringstream str;
+    std::string adrss;
+    str << this;
+    str >> adrss;
+    return adrss;
 }

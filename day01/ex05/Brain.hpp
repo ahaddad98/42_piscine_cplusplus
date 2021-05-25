@@ -6,23 +6,21 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:31:54 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/24 21:46:21 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/25 14:02:06 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_H
 # define BRAIN_H
-# include "iostream"
-
+# include <iostream>
+# include <sstream>
 class Brain
 {
 private:
-    // unsigned int water;
     
 public:
     Brain();
-    Brain    *identify();
-    // ~Brain();
+    std::string    identify() const ;
 };
 
 
