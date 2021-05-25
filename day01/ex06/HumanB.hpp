@@ -6,24 +6,26 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 14:17:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/25 14:20:57 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/25 19:58:42 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_H
 # define HUMANB_H
 # include <iostream>
+# include "Weapon.hpp"
 
 class HumanB
 {
 private:
-    /* data */
+    std::string name;
+    Weapon  *weapon; 
 public:
-    HumanB(/* args */);
-    ~HumanB();
+    // HumanB(std::string nm, Weapon *wep);
+    HumanB(std::string nm);
+    // ~HumanB();
+    void    setweapon(Weapon& wp) ;
+    void attack();
 };
-
-
-
 
 #endif
