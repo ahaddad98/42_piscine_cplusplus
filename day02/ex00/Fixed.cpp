@@ -6,7 +6,16 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:46:48 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/26 20:46:49 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/26 20:53:31 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+Fixed::Fixed(/* args */)
+{
+}
+
+Fixed::~Fixed()
+{
+}

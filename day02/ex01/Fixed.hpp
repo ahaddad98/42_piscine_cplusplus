@@ -6,7 +6,23 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:47:00 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/26 20:47:01 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/26 20:53:48 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#ifndef FIXED_H
+# define FIXED_H
+
+class Fixed
+{
+private:
+    /* data */
+public:
+    Fixed(/* args */);
+    ~Fixed();
+};
+
+
+
+#endif
