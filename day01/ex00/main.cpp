@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 17:37:23 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/18 17:47:15 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/26 15:49:25 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void ponyOnTheStack()
 void ponyOnTheHeap()
 {
     Pony *pony = new Pony("ray", 2, "brown");
-    delete pony;
     std::cout << "im form the heap\n";
+    delete pony;
 }
-    
+
 int main()
 {
     ponyOnTheStack();

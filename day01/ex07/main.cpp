@@ -1,4 +1,4 @@
-// /* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 20:44:16 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/26 12:05:41 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/26 16:13:37 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(int ac, char **av)
         std::string str2 = av[3];
         std::string str0 = av[1];
         int i = 0;
-        std::ifstream Myfile("FILENAME.replace");
+        std::ifstream Myfile(av[1]);
         str0 = av[1];
         str0 += ".replace";
         std::ofstream newfile(str0);
