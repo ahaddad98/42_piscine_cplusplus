@@ -30,12 +30,12 @@ Fixed::Fixed(const Fixed& f1)
     *this = f1;
 }
 
-// Fixed    & Fixed::operator=(const Fixed &f)
-// {
-//     std::cout << "Assignation operator called" << std::endl;
-//     raw = f.getRawBits();
-//     return *this;
-// }
+Fixed    & Fixed::operator=(const Fixed &f)
+{
+    std::cout << "Assignation operator called" << std::endl;
+    raw = f.getRawBits();
+    return *this;
+}
 
 void Fixed::setRawBits(int const raw)
 {
@@ -59,14 +59,6 @@ Fixed::~Fixed()
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed			&Fixed::operator=(Fixed const &rhs)
-{
-	std::cout << "Assignation operator called" << std::endl;
-	if (this != &rhs)
-		this->raw = rhs.bits;
-	return *this;
-}
-
 int				Fixed::toInt(void) const
 {
 	return (this->raw >> this->bits);
@@ -77,8 +69,8 @@ float			Fixed::toFloat(void) const
 	return (((float)this->raw) / (1 << this->bits));
 }
 
-std::ostream	&operator<<(std::ostream &os, Fixed const &rhs)
+std::ostream	&operator<<(std::ostream &os, Fixed const &fixed)
 {
-	os << rhs.toFloat();
+	os << fixed.toFloat();
 	return (os);
 }
