@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 15:51:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/05/26 16:35:26 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/05/31 12:07:02 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ ZombieHorde::ZombieHorde(int number) : n(number)
 
 ZombieHorde::~ZombieHorde() 
 {
-    delete[] zombie;
+    // delete[] zombie;
 }
