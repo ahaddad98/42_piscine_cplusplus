@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/01 20:50:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/01 21:37:31 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ******************************
 */
 
-void attack1()
+void FragTrap::attack1()
 {
     std::cout << "Hyah!"
               << std::endl
@@ -32,48 +32,48 @@ void attack1()
               << "Bop!"
               << std::endl;
 }
-void attack2()
+void FragTrap::attack2()
 {
-    std::cout << "Hyah!"
+    std::cout << "2 Hyah!"
               << std::endl
-              << "Heyyah!"
+              << "2 Heyyah!"
               << std::endl
-              << "Take that!"
+              << "2 Take that!"
               << std::endl
-              << "Bop!"
+              << "2 Bop!"
               << std::endl;
 }
-void attack3()
+void FragTrap::attack3()
 {
-    std::cout << "Hyah!"
+    std::cout << "3 Hyah!"
               << std::endl
-              << "Heyyah!"
+              << "3 Heyyah!"
               << std::endl
-              << "Take that!"
+              << "3 Take that!"
               << std::endl
-              << "Bop!"
+              << "3 Bop!"
               << std::endl;
 }
-void attack4()
+void FragTrap::attack4()
 {
-    std::cout << "Hyah!"
+    std::cout << "4 Hyah!"
               << std::endl
-              << "Heyyah!"
+              << "4 Heyyah!"
               << std::endl
-              << "Take that!"
+              << "4 Take that!"
               << std::endl
-              << "Bop!"
+              << "4 Bop!"
               << std::endl;
 }
-void attack5()
+void FragTrap::attack5()
 {
-    std::cout << "Hyah!"
+    std::cout << "5 Hyah!"
               << std::endl
-              << "Heyyah!"
+              << "5 Heyyah!"
               << std::endl
-              << "Take that!"
+              << "5 Take that!"
               << std::endl
-              << "Bop!"
+              << "5 Bop!"
               << std::endl;
 }
 
@@ -165,12 +165,27 @@ void FragTrap::beRepaired(unsigned int amount)
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
+    int r = 1;
     if (this->Energy_points >= 25)
     {
         // Random Attack
+        srand(time(0));
+        r = rand() % 5;
+        if ((r+1) == 1)
+            attack1();
+        if ((r+1) == 2)
+            attack2();
+        if ((r+1) == 3)
+            attack3();
+        if ((r+1) == 4)
+            attack4();
+        if ((r+1) == 5)
+            attack5();
         this->Energy_points -= 25;
     }
     else
-        // print out of energyd
+    {
+        std::cout << "dammage sghar mn 25" << std::endl;
+    }    
         std::cout << target << std::endl;
 }
