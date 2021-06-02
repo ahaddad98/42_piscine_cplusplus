@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/01 21:37:31 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/02 18:03:00 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ******************************
 */
 
-void FragTrap::attack1()
+void FragTrap::attack1(std::string target)
 {
     std::cout << "Hyah!"
               << std::endl
@@ -29,51 +29,51 @@ void FragTrap::attack1()
               << std::endl
               << "Take that!"
               << std::endl
-              << "Bop!"
+              << target
               << std::endl;
 }
-void FragTrap::attack2()
+void FragTrap::attack2(std::string target)
 {
-    std::cout << "2 Hyah!"
+    std::cout << "Watch as we observe the rare and beautiful Clappy Bird!"
               << std::endl
-              << "2 Heyyah!"
+              << "I'm flying! I'm really flying!"
               << std::endl
-              << "2 Take that!"
+              << "Look out below!"
               << std::endl
-              << "2 Bop!"
+              << target
               << std::endl;
 }
-void FragTrap::attack3()
+void FragTrap::attack3(std::string target)
 {
-    std::cout << "3 Hyah!"
+    std::cout << "RUN FOR YOUR LIIIIIVES!!!"
               << std::endl
-              << "3 Heyyah!"
+              << "Oh, he's big... REALLY big!"
               << std::endl
-              << "3 Take that!"
+              << "That guy looks an awful lot like a"
               << std::endl
-              << "3 Bop!"
+              << target
               << std::endl;
 }
-void FragTrap::attack4()
+void FragTrap::attack4(std::string target)
 {
-    std::cout << "4 Hyah!"
+    std::cout << "I am a tornado of death and bullets!"
               << std::endl
-              << "4 Heyyah!"
+              << "Stop me before I kill again, except don't!"
               << std::endl
-              << "4 Take that!"
+              << "I'm on a roll!"
               << std::endl
-              << "4 Bop!"
+              << target
               << std::endl;
 }
-void FragTrap::attack5()
+void FragTrap::attack5(std::string target)
 {
-    std::cout << "5 Hyah!"
+    std::cout << "My assets... frozen!"
               << std::endl
-              << "5 Heyyah!"
+              << "I can't feel my fingers! Gah! I don't have any fingers!"
               << std::endl
-              << "5 Take that!"
+              << "I am a robot popsicle!"
               << std::endl
-              << "5 Bop!"
+              << target
               << std::endl;
 }
 
@@ -87,12 +87,15 @@ FragTrap::FragTrap()
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
-    std::cout << "layss layss layss" << std::endl;
+    std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-    std::cout << "ah ana mon3im ankhaliha douz" << std::endl;
+    if (Energy_points <= 0)
+        std::cout << "Bask in my aura of death!" << std::endl;
+    else
+        std::cout << "ah ana mon3im ankhaliha douz" << std::endl;
 }
 
 FragTrap::FragTrap(std::string n) : name(n)
@@ -105,7 +108,7 @@ FragTrap::FragTrap(std::string n) : name(n)
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
-    std::cout << "layss layss layss" << std::endl;
+    std::cout << "Look out everybody!" <<"My name is " << name  << ", And now, Things are about to get awesome!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &f1)
@@ -156,9 +159,11 @@ void FragTrap::takeDamage(unsigned int amount)
 
 void FragTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "sbitar sbitar " << std::endl;
     if ((Energy_points + amount) <= 100)
+    {
+        std::cout << "Good as new, I think. Am I leaking?" << std::endl;
         Energy_points += amount;
+    }
     else
         Energy_points = 100;
 }
@@ -166,26 +171,23 @@ void FragTrap::beRepaired(unsigned int amount)
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
     int r = 1;
+    std::cout << "Hey I'm " << name << std::endl;
     if (this->Energy_points >= 25)
     {
-        // Random Attack
         srand(time(0));
         r = rand() % 5;
-        if ((r+1) == 1)
-            attack1();
-        if ((r+1) == 2)
-            attack2();
-        if ((r+1) == 3)
-            attack3();
-        if ((r+1) == 4)
-            attack4();
-        if ((r+1) == 5)
-            attack5();
+        if ((r + 1) == 1)
+            attack1(target);
+        if ((r + 1) == 2)
+            attack2(target);
+        if ((r + 1) == 3)
+            attack3(target);
+        if ((r + 1) == 4)
+            attack4(target);
+        if ((r + 1) == 5)
+            attack5(target);
         this->Energy_points -= 25;
     }
     else
-    {
         std::cout << "dammage sghar mn 25" << std::endl;
-    }    
-        std::cout << target << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/01 19:52:40 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/02 15:58:24 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ private:
     unsigned int Melee_attack_damage;
     unsigned int Ranged_attack_damage;
     unsigned int Armor_damage_reduction;
-    void attack1();
-    void attack2();
-    void attack3();
-    void attack4();
-    void attack5();
+    void attack1(std::string target);
+    void attack2(std::string target);
+    void attack3(std::string target);
+    void attack4(std::string target);
+    void attack5(std::string target);
     std::string name;
 
 public:
