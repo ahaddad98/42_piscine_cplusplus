@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 18:03:00 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/02 21:21:27 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ FragTrap::~FragTrap()
     if (Energy_points <= 0)
         std::cout << "Bask in my aura of death!" << std::endl;
     else
-        std::cout << "ah ana mon3im ankhaliha douz" << std::endl;
+        std::cout << "ah ana mon3im ankhaliha douz from FRAGTRAP" << std::endl;
 }
 
 FragTrap::FragTrap(std::string n) : name(n)
