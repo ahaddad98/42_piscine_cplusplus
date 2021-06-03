@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 21:19:29 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/03 17:31:37 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int main()
     scavtrap1.meleeAttack("bolles");
     scavtrap1.takeDamage(10);
     scavtrap1.beRepaired(10);
+    scavtrap1.challengeNewcomer();
     return (0);
 }

@@ -6,19 +6,32 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 21:21:39 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/03 17:31:28 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// ScavTrap::ScavTrap(/* args */)
-// {
-// }
-
-// ScavTrap::~ScavTrap()
-// {
-// }
+void ScavTrap::challenge1()
+{
+    std::cout << "Don't bother trying to find me. I'll find you." << std::endl;
+}
+void ScavTrap::challenge2()
+{
+    std::cout << "Hope your teammates bring you back-- so I can find you again." << std::endl;
+}
+void ScavTrap::challenge3()
+{
+    std::cout << "You're just another mark on my list." << std::endl;
+}
+void ScavTrap::challenge4()
+{
+    std::cout << "I don't want to kill you. But, you're in my way." << std::endl;
+}
+void ScavTrap::challenge5()
+{
+    std::cout << "Wait until you see what I have in store." << std::endl;
+}
 
 ScavTrap::ScavTrap()
 {
@@ -51,7 +64,8 @@ ScavTrap::ScavTrap(std::string n) : name(n)
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
-    std::cout << "Look out everybody!" <<"My name is " << name  << ", And now, Things are about to get awesome!" << std::endl;
+    std::cout << "Look out everybody!"
+              << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &f1)
@@ -109,4 +123,28 @@ void ScavTrap::beRepaired(unsigned int amount)
     }
     else
         Energy_points = 100;
+}
+
+void ScavTrap::challengeNewcomer()
+{
+    int r = 1;
+    std::cout << "Hey I'm " << name << std::endl;
+    if (this->Energy_points >= 25)
+    {
+        srand(time(0));
+        r = rand() % 5;
+        if ((r + 1) == 1)
+            challenge1();
+        if ((r + 1) == 2)
+            challenge2();
+        if ((r + 1) == 3)
+            challenge3();
+        if ((r + 1) == 4)
+            challenge4();
+        if ((r + 1) == 5)
+            challenge5();
+        this->Energy_points -= 25;
+    }
+    else
+        std::cout << "dammage sghar mn 25" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:45:24 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 21:16:36 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/03 17:28:27 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ private:
     unsigned int Ranged_attack_damage;
     unsigned int Armor_damage_reduction;
     std::string name;
-    void attack1(std::string target);
-    void attack2(std::string target);
-    void attack3(std::string target);
-    void attack4(std::string target);
-    void attack5(std::string target);
+    void challenge1();
+    void challenge2();
+    void challenge3();
+    void challenge4();
+    void challenge5();
 
 public:
     ScavTrap();
