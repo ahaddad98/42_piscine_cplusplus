@@ -15,6 +15,7 @@
 #include "ClapTrap.hpp"
 #include "NinjaTrap.hpp"
 
+
 int main()
 {
     std::cout << "***** HERE IS NINJATRAP ******" << std::endl;
