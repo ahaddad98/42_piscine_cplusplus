@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 21:21:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/04 18:47:31 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,6 @@ void FragTrap::attack5(std::string target)
 
 FragTrap::FragTrap()
 {
-    this->Hit_points = 100;
-    this->Max_hit_points = 100;
-    this->Energy_points = 100;
-    this->Max_energy_points = 100;
-    this->level = 1;
-    this->Melee_attack_damage = 30;
-    this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
     std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
 }
 
@@ -98,17 +90,10 @@ FragTrap::~FragTrap()
         std::cout << "ah ana mon3im ankhaliha douz from FRAGTRAP" << std::endl;
 }
 
-FragTrap::FragTrap(std::string n) : name(n)
+FragTrap::FragTrap(std::string n) : ClapTrap(n)
 {
-    this->Hit_points = 100;
-    this->Max_hit_points = 100;
-    this->Energy_points = 100;
-    this->Max_energy_points = 100;
-    this->level = 1;
-    this->Melee_attack_damage = 30;
-    this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
-    std::cout << "Look out everybody!" <<"My name is " << name  << ", And now, Things are about to get awesome!" << std::endl;
+    std::cout << "Look out everybody!"
+              << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &f1)
@@ -122,50 +107,6 @@ FragTrap &FragTrap::operator=(const FragTrap &f)
     std::cout << "Assignation operator called" << std::endl;
     name = f.name;
     return *this;
-}
-
-void FragTrap::rangedAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP "
-              << name
-              << " attaque "
-              << target
-              << " a distance , causant "
-              << Ranged_attack_damage
-              << " points de degats "
-              << std::endl;
-}
-
-void FragTrap::meleeAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP "
-              << name
-              << " attaque "
-              << target
-              << " a distance , causant "
-              << Melee_attack_damage
-              << " points de degats "
-              << std::endl;
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-    std::cout << "zahya dammage" << std::endl;
-    if (Energy_points >= amount)
-        Energy_points -= amount;
-    else
-        std::cout << "hhhhh da3ti a chab" << std::endl;
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-    if ((Energy_points + amount) <= 100)
-    {
-        std::cout << "Good as new, I think. Am I leaking?" << std::endl;
-        Energy_points += amount;
-    }
-    else
-        Energy_points = 100;
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
