@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 19:57:10 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 17:37:31 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/04 19:06:41 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,25 @@
 
 ClapTrap::ClapTrap(/* args */)
 {
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
+    this->Energy_points = 100;
+    this->Max_energy_points = 100;
+    this->level = 1;
+    this->Melee_attack_damage = 30;
+    this->Ranged_attack_damage = 20;
+    this->Armor_damage_reduction = 20;
 }
 ClapTrap::ClapTrap(std::string na) : name(na)
 {
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
+    this->Energy_points = 100;
+    this->Max_energy_points = 100;
+    this->level = 1;
+    this->Melee_attack_damage = 30;
+    this->Ranged_attack_damage = 20;
+    this->Armor_damage_reduction = 20;
 }
 
 ClapTrap::~ClapTrap()

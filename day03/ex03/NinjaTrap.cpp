@@ -6,13 +6,13 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 19:01:52 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/04 19:04:40 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(/* args */)
+NinjaTrap::NinjaTrap()
 {
 }
 
