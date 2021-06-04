@@ -6,13 +6,14 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 19:57:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 17:35:01 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/04 20:27:23 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_H
 #define CLAPTRAP_H
 #include <iostream>
+
 class ClapTrap
 {
 protected:

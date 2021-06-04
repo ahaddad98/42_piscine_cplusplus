@@ -6,12 +6,13 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:21 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 19:05:03 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/04 20:46:00 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NINJATRAP_H
 # define NINJATRAP_H
+# include  <iostream>
 class NinjaTrap
 {
 private:
@@ -26,7 +27,10 @@ private:
     std::string name;
 public:
     NinjaTrap();
+    NinjaTrap(std::string na);
+    NinjaTrap &operator=(const NinjaTrap & N);
     ~NinjaTrap();
+    void ninjaShoebox();
 };
 
 
