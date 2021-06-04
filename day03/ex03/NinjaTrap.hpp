@@ -13,6 +13,10 @@
 #ifndef NINJATRAP_H
 # define NINJATRAP_H
 # include  <iostream>
+# include "FragTrap.hpp"
+# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+
 class NinjaTrap
 {
 private:
@@ -30,7 +34,9 @@ public:
     NinjaTrap(std::string na);
     NinjaTrap &operator=(const NinjaTrap & N);
     ~NinjaTrap();
-    void ninjaShoebox();
+    void ninjaShoebox(FragTrap const & frag);
+    void ninjaShoebox(ClapTrap const & clap);
+    void ninjaShoebox(ScavTrap const & scav);
 };
 
 

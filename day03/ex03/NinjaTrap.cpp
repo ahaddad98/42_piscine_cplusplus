@@ -45,7 +45,15 @@ NinjaTrap &NinjaTrap::operator=(const NinjaTrap & N)
     return *this;
 }
 
-void NinjaTrap::ninjaShoebox()
-{
-    
-}
+    void ninjaShoebox(FragTrap const & frag)
+    {
+        
+    }
+    void ninjaShoebox(ClapTrap const & clap)
+    {
+        
+    }
+    void ninjaShoebox(ScavTrap const & scav)
+    {
+        
+    }
