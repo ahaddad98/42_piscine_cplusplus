@@ -32,6 +32,7 @@ public:
     ClapTrap(std::string na);
     ClapTrap &operator=(const ClapTrap &f);
     ~ClapTrap();
+    std::string getname() const;
     void rangedAttack(std::string const &target);
     void meleeAttack(std::string const &target);
     void takeDamage(unsigned int amount);

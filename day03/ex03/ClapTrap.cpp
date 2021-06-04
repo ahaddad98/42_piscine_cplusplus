@@ -35,6 +35,11 @@ ClapTrap::ClapTrap(std::string na) : name(na)
     this->Armor_damage_reduction = 20;
 }
 
+std::string ClapTrap::getname() const
+{
+    return name;
+}
+
 ClapTrap::~ClapTrap()
 {
 }
