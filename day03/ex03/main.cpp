@@ -13,8 +13,12 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
+#include "NinjaTrap.hpp"
+
 int main()
 {
+    std::cout << "***** HERE IS NINJATRAP ******" << std::endl;
+    NinjaTrap ninjatrap("chiwahed");
     std::cout << "***** HERE IS CLAPTRAP ******" << std::endl;
     ClapTrap claptrap;
     ClapTrap claptrap1("amine");
@@ -42,5 +46,9 @@ int main()
     scavtrap1.takeDamage(10);
     scavtrap1.beRepaired(10);
     scavtrap1.challengeNewcomer();
+    std::cout << "***** HERE IS NINJATRAP ******" << std::endl;
+    ninjatrap.ninjaShoebox(fragtrap);
+    ninjatrap.ninjaShoebox(claptrap);
+    ninjatrap.ninjaShoebox(scavtrap);
     return (0);
 }

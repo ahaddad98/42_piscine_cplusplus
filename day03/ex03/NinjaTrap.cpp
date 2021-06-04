@@ -45,7 +45,7 @@ NinjaTrap &NinjaTrap::operator=(const NinjaTrap & N)
     return *this;
 }
 
-void NinjaTrap::ninjaShoebox(FragTrap const & frag)
+void NinjaTrap::ninjaShoebox(FragTrap const & frag) const
 {
     if (this->Energy_points >= 25)
     {
@@ -56,7 +56,7 @@ void NinjaTrap::ninjaShoebox(FragTrap const & frag)
         std::cout << "hhhh bslama" << std::endl;
 }
 
-void NinjaTrap::ninjaShoebox(ClapTrap const & clap)
+void NinjaTrap::ninjaShoebox(ClapTrap const & clap) const
 {
     if (this->Energy_points >= 25)
     {
@@ -67,7 +67,7 @@ void NinjaTrap::ninjaShoebox(ClapTrap const & clap)
         std::cout << "hhhh bslama" << std::endl;
 }
 
-void     NinjaTrap::ninjaShoebox(ScavTrap const & scav)
+void     NinjaTrap::ninjaShoebox(ScavTrap const & scav) const
 {   
     if (this->Energy_points >= 25)
     {
