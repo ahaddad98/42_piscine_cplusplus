@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 17:10:34 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 15:25:41 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
-private:
+protected:
     void attack1(std::string target);
     void attack2(std::string target);
     void attack3(std::string target);
