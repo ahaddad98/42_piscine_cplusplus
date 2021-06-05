@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 19:57:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 17:35:01 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 18:17:20 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     ClapTrap();
     ClapTrap(std::string na);
     ClapTrap &operator=(const ClapTrap &f);
-    ~ClapTrap();
+    virtual ~ClapTrap();
     void rangedAttack(std::string const &target);
     void meleeAttack(std::string const &target);
     void takeDamage(unsigned int amount);

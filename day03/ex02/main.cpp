@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 18:54:33 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 18:21:54 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 #include "ClapTrap.hpp"
 int main()
 {
+    FragTrap a("amine sba7");
+    FragTrap s("samir sahbi");
+    FragTrap b;
+
+    // badalna f a
+
+    FragTrap c(a);
+    
+    // badalna f b
+    // badalna f a
+
+    b = a;
+
     std::cout << "***** HERE IS CLAPTRAP ******" << std::endl;
     ClapTrap claptrap;
     ClapTrap claptrap1("amine");

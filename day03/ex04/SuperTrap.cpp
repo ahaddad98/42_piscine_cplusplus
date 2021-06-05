@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 15:28:42 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 20:49:59 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,20 @@
 
 SuperTrap::SuperTrap()
 {
-    this->Hit_points = 60;
-    this->Max_hit_points = 60;
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
     this->Energy_points = 120;
     this->Max_energy_points = 120;
     this->level = 1;
     this->Melee_attack_damage = 60;
-    this->Ranged_attack_damage = 5;
-    this->Armor_damage_reduction = 0;
+    this->Ranged_attack_damage = 20;
+    this->Armor_damage_reduction = 5;
+    std::cout << this->Hit_points << std::endl;
+    std::cout << this->Max_hit_points << std::endl;
+    std::cout << this->Energy_points << std::endl;
+    std::cout << this->level << std::endl;
+    std::cout << this->Melee_attack_damage << std::endl;
+    std::cout << this->Ranged_attack_damage << std::endl;
 }
 
 SuperTrap::~SuperTrap()
@@ -30,14 +36,14 @@ SuperTrap::~SuperTrap()
 
 SuperTrap::SuperTrap(std::string _name) : FragTrap(_name), NinjaTrap(_name)
 {
-    this->Hit_points = 60;
-    this->Max_hit_points = 60;
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
     this->Energy_points = 120;
     this->Max_energy_points = 120;
     this->level = 1;
     this->Melee_attack_damage = 60;
-    this->Ranged_attack_damage = 5;
-    this->Armor_damage_reduction = 0;
+    this->Ranged_attack_damage = 20;
+    this->Armor_damage_reduction = 5;
 }
 
 SuperTrap::SuperTrap(const SuperTrap &s)

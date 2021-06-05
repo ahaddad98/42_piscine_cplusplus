@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/03 17:31:28 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 18:14:02 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ ScavTrap::ScavTrap()
 {
     this->Hit_points = 100;
     this->Max_hit_points = 100;
-    this->Energy_points = 100;
-    this->Max_energy_points = 100;
+    this->Energy_points = 50;
+    this->Max_energy_points = 50;
     this->level = 1;
-    this->Melee_attack_damage = 30;
-    this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
+    this->Melee_attack_damage = 20;
+    this->Ranged_attack_damage = 15;
+    this->Armor_damage_reduction = 3;
     std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
 }
 
@@ -58,12 +58,12 @@ ScavTrap::ScavTrap(std::string n) : name(n)
 {
     this->Hit_points = 100;
     this->Max_hit_points = 100;
-    this->Energy_points = 100;
-    this->Max_energy_points = 100;
+    this->Energy_points = 50;
+    this->Max_energy_points = 50;
     this->level = 1;
-    this->Melee_attack_damage = 30;
-    this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
+    this->Melee_attack_damage = 20;
+    this->Ranged_attack_damage = 15;
+    this->Armor_damage_reduction = 3;
     std::cout << "Look out everybody!"
               << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
 }

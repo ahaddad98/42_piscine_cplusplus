@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:30 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 15:30:21 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 17:59:47 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@ int main()
     std::cout << "***** HERE IS SUOERTRAP ******" << std::endl;
     SuperTrap supertrap;
     SuperTrap supertrap1("amine");
+    // std::cout << supertrap1.name << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
+    // std::cout << supertrap1 << std::endl;
     // std::cout << "***** HERE IS NINJATRAP ******" << std::endl;
     // NinjaTrap ninjatrap("chiwahed");
     // std::cout << "***** HERE IS CLAPTRAP ******" << std::endl;

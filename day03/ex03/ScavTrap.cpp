@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 18:52:41 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 20:31:28 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,16 @@ void ScavTrap::challenge5()
     std::cout << "Wait until you see what I have in store." << std::endl;
 }
 
-ScavTrap::ScavTrap(): ClapTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
+    this->Energy_points = 50;
+    this->Max_energy_points = 50;
+    this->level = 1;
+    this->Melee_attack_damage = 20;
+    this->Ranged_attack_damage = 15;
+    this->Armor_damage_reduction = 3;
     std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
 }
 
@@ -48,6 +56,14 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(std::string n) : ClapTrap(n)
 {
+    this->Hit_points = 100;
+    this->Max_hit_points = 100;
+    this->Energy_points = 50;
+    this->Max_energy_points = 50;
+    this->level = 1;
+    this->Melee_attack_damage = 20;
+    this->Ranged_attack_damage = 15;
+    this->Armor_damage_reduction = 3;
     std::cout << "Look out everybody!"
               << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
 }

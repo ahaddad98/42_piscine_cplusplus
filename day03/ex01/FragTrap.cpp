@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/02 21:21:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 20:55:57 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,20 +107,37 @@ FragTrap::FragTrap(std::string n) : name(n)
     this->level = 1;
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
-    std::cout << "Look out everybody!" <<"My name is " << name  << ", And now, Things are about to get awesome!" << std::endl;
+    this->Armor_damage_reduction = 5;
+    std::cout << "Look out everybody!"
+              << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &f1)
 {
     std::cout << "wa 3ta9 3ta9" << std::endl;
     name = f1.name;
+    this->Hit_points = f1.Hit_points;
+    this->Max_hit_points = f1.Max_hit_points;
+    this->Energy_points = f1.Energy_points;
+    this->Max_energy_points = f1.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = f1.Melee_attack_damage;
+    this->Ranged_attack_damage = f1.Ranged_attack_damage;
+    this->Armor_damage_reduction = f1.Armor_damage_reduction;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &f)
 {
     std::cout << "Assignation operator called" << std::endl;
     name = f.name;
+    this->Hit_points = f.Hit_points;
+    this->Max_hit_points = f.Max_hit_points;
+    this->Energy_points = f.Energy_points;
+    this->Max_energy_points = f.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = f.Melee_attack_damage;
+    this->Ranged_attack_damage = f.Ranged_attack_damage;
+    this->Armor_damage_reduction = f.Armor_damage_reduction;
     return *this;
 }
 

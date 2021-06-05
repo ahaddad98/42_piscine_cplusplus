@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:57 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 15:09:53 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 18:26:20 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 
 class SuperTrap : public FragTrap , public NinjaTrap
 {
-private:
-    
+
 public:
     SuperTrap();
     SuperTrap(std::string _name);
