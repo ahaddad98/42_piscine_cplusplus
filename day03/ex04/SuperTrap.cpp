@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 20:49:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 21:28:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,26 @@ SuperTrap::SuperTrap(std::string _name) : FragTrap(_name), NinjaTrap(_name)
 SuperTrap::SuperTrap(const SuperTrap &s)
 {
     name = s.getname();
+    this->Hit_points = s.Hit_points;
+    this->Max_hit_points = s.Max_hit_points;
+    this->Energy_points = s.Energy_points;
+    this->Max_energy_points = s.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = s.Melee_attack_damage;
+    this->Ranged_attack_damage = s.Ranged_attack_damage;
+    this->Armor_damage_reduction = s.Armor_damage_reduction;
 }
 
 SuperTrap &SuperTrap::operator=(const SuperTrap &s)
 {
     name = s.getname();
+    this->Hit_points = s.Hit_points;
+    this->Max_hit_points = s.Max_hit_points;
+    this->Energy_points = s.Energy_points;
+    this->Max_energy_points = s.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = s.Melee_attack_damage;
+    this->Ranged_attack_damage = s.Ranged_attack_damage;
+    this->Armor_damage_reduction = s.Armor_damage_reduction;
     return *this;
 }

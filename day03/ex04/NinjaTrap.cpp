@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 20:46:20 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 21:26:50 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,34 @@ NinjaTrap::~NinjaTrap()
 {
 }
 
-NinjaTrap &NinjaTrap::operator=(const NinjaTrap & N)
+NinjaTrap::NinjaTrap(const NinjaTrap &N)
 {
     name = N.name;
+    this->Hit_points = N.Hit_points;
+    this->Max_hit_points = N.Max_hit_points;
+    this->Energy_points = N.Energy_points;
+    this->Max_energy_points = N.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = N.Melee_attack_damage;
+    this->Ranged_attack_damage = N.Ranged_attack_damage;
+    this->Armor_damage_reduction = N.Armor_damage_reduction;
+}
+
+NinjaTrap &NinjaTrap::operator=(const NinjaTrap &N)
+{
+    name = N.name;
+    this->Hit_points = N.Hit_points;
+    this->Max_hit_points = N.Max_hit_points;
+    this->Energy_points = N.Energy_points;
+    this->Max_energy_points = N.Max_energy_points;
+    this->level = 1;
+    this->Melee_attack_damage = N.Melee_attack_damage;
+    this->Ranged_attack_damage = N.Ranged_attack_damage;
+    this->Armor_damage_reduction = N.Armor_damage_reduction;
     return *this;
 }
 
-void NinjaTrap::ninjaShoebox(FragTrap const & frag) const
+void NinjaTrap::ninjaShoebox(FragTrap const &frag) const
 {
     if (this->Energy_points >= 25)
     {
@@ -56,7 +77,7 @@ void NinjaTrap::ninjaShoebox(FragTrap const & frag) const
         std::cout << "hhhh bslama" << std::endl;
 }
 
-void NinjaTrap::ninjaShoebox(ClapTrap const & clap) const
+void NinjaTrap::ninjaShoebox(ClapTrap const &clap) const
 {
     if (this->Energy_points >= 25)
     {
@@ -67,13 +88,13 @@ void NinjaTrap::ninjaShoebox(ClapTrap const & clap) const
         std::cout << "hhhh bslama" << std::endl;
 }
 
-void     NinjaTrap::ninjaShoebox(ScavTrap const & scav) const
-{   
+void NinjaTrap::ninjaShoebox(ScavTrap const &scav) const
+{
     if (this->Energy_points >= 25)
     {
         std::cout << this->name << " hhhhh 3andek ydorbek asahbi" << std::endl;
         std::cout << scav.getname() << " gha khalih " << std::endl;
     }
     else
-        std::cout << "hhhh bslama" << std::endl;   
-}   
+        std::cout << "hhhh bslama" << std::endl;
+}

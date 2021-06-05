@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:21 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/04 20:46:00 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 21:23:32 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
     
 public:
     NinjaTrap();
+    NinjaTrap(const NinjaTrap &f1);
     NinjaTrap(std::string na);
     NinjaTrap &operator=(const NinjaTrap & N);
     ~NinjaTrap();

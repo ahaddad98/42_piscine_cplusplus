@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 19:57:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 18:17:20 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/05 21:16:23 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ protected:
 public:
     ClapTrap();
     ClapTrap(std::string na);
+    ClapTrap(const ClapTrap &f1);
     ClapTrap &operator=(const ClapTrap &f);
     virtual ~ClapTrap();
     void rangedAttack(std::string const &target);
