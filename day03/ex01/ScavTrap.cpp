@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 21:01:56 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 11:59:48 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ScavTrap::ScavTrap()
     this->Melee_attack_damage = 20;
     this->Ranged_attack_damage = 15;
     this->Armor_damage_reduction = 3;
-    std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
+    std::cout << "Look out everybody! Things are about to get awesome! << FROM SCAVTRAP >>" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -51,7 +51,7 @@ ScavTrap::~ScavTrap()
     if (Energy_points <= 0)
         std::cout << "Bask in my aura of death!" << std::endl;
     else
-        std::cout << "I'll die the way I lived: annoying!" << std::endl;
+        std::cout << "I'll die the way I lived: annoying! << FROM SCAVTRAP >>" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string n) : name(n)
@@ -65,7 +65,7 @@ ScavTrap::ScavTrap(std::string n) : name(n)
     this->Ranged_attack_damage = 15;
     this->Armor_damage_reduction = 3;
     std::cout << "Look out everybody!"
-              << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
+              << "My name is " << name << " form FROM SCAVTRAP"<< ", And now, Things are about to get awesome!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &f1)
@@ -84,7 +84,7 @@ ScavTrap::ScavTrap(const ScavTrap &f1)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &f)
 {
-    std::cout << "Assignation operator called" << std::endl;
+    std::cout << "Assignation operator called << FROM SCAVTRAP >>" << std::endl;
     name = f.name;
     this->Hit_points = f.Hit_points;
     this->Max_hit_points = f.Max_hit_points;

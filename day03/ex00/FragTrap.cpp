@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 20:55:47 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 11:50:02 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ FragTrap::FragTrap()
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
-    std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
+    std::cout << "Look out everybody! Things are about to get awesome! <<FROM FRAGTRAP>>" << std::endl;
 }
 
 FragTrap::~FragTrap()
@@ -83,7 +83,7 @@ FragTrap::~FragTrap()
     if (Energy_points <= 0)
         std::cout << "Bask in my aura of death!" << std::endl;
     else
-        std::cout << "I'll die the way I lived: annoying!" << std::endl;
+        std::cout << "I'll die the way I lived: annoying! <<FROM FRAGTRAP>>" << std::endl;
 }
 
 FragTrap::FragTrap(std::string n) : name(n)
