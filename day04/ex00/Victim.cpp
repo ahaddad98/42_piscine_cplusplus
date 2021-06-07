@@ -6,13 +6,12 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:13:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 15:19:08 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 15:20:06 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Victim.hpp"
   
-
 Victim::Victim(/* args */)
 {
 }
