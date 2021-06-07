@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 11:59:48 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 12:53:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,21 +124,22 @@ void ScavTrap::meleeAttack(std::string const &target)
 void ScavTrap::takeDamage(unsigned int amount)
 {
     std::cout << "zahya dammage" << std::endl;
-    if (Energy_points >= amount)
-        Energy_points -= amount;
+    amount = amount - Armor_damage_reduction;
+    if (Hit_points >= amount)
+        Hit_points -= amount;
     else
         std::cout << "hhhhh da3ti a chab" << std::endl;
 }
 
 void ScavTrap::beRepaired(unsigned int amount)
 {
-    if ((Energy_points + amount) <= 100)
+    if ((Hit_points + amount) <= 100)
     {
         std::cout << "Good as new, I think. Am I leaking?" << std::endl;
-        Energy_points += amount;
+        Hit_points += amount;
     }
     else
-        Energy_points = 100;
+        Hit_points = 100;
 }
 
 void ScavTrap::challengeNewcomer()
@@ -162,5 +163,5 @@ void ScavTrap::challengeNewcomer()
         this->Energy_points -= 25;
     }
     else
-        std::cout << "dammage sghar mn 25" << std::endl;
+        std::cout << "dammage less than 25" << std::endl;
 }

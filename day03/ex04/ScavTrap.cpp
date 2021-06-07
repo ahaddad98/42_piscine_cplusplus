@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 12:30:45 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 13:02:18 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void ScavTrap::challengeNewcomer()
         this->Energy_points -= 25;
     }
     else
-        std::cout << "dammage sghar mn 25" << std::endl;
+        std::cout << "dammage less than 25" << std::endl;
 }
 void ScavTrap::challenge1()
 {

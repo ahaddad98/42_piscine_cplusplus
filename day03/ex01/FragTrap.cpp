@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 11:58:41 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 12:45:00 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ FragTrap::FragTrap()
     this->level = 1;
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
-    this->Armor_damage_reduction = 20;
+    this->Armor_damage_reduction = 5;
     std::cout << "Look out everybody! Things are about to get awesome! <<FROM FRAGTRAP>>" << std::endl;
 }
 
@@ -153,21 +153,22 @@ void FragTrap::meleeAttack(std::string const &target)
 void FragTrap::takeDamage(unsigned int amount)
 {
     std::cout << "zahya dammage" << std::endl;
-    if (Energy_points >= amount)
-        Energy_points -= amount;
+    amount = amount - Armor_damage_reduction;
+    if (Hit_points >= amount)
+        Hit_points -= amount;
     else
         std::cout << "hhhhh da3ti a chab" << std::endl;
 }
 
 void FragTrap::beRepaired(unsigned int amount)
 {
-    if ((Energy_points + amount) <= 100)
+    if ((Hit_points + amount) <= 100)
     {
         std::cout << "Good as new, I think. Am I leaking?" << std::endl;
-        Energy_points += amount;
+        Hit_points += amount;
     }
     else
-        Energy_points = 100;
+        Hit_points = 100;
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
@@ -191,5 +192,5 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target)
         this->Energy_points -= 25;
     }
     else
-        std::cout << "dammage sghar mn 25" << std::endl;
+        std::cout << "dammage less than 25" << std::endl;
 }
