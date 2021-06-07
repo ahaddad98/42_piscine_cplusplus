@@ -6,12 +6,12 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 20:47:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 13:02:18 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 15:04:18 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
+      
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
