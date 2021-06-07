@@ -34,11 +34,7 @@ void FragTrap::attack1(std::string target)
 }
 void FragTrap::attack2(std::string target)
 {
-    std::cout << "Watch as we observe the rare and beautiful Clappy Bird!"
-              << std::endl
-              << "I'm flying! I'm really flying!"
-              << std::endl
-              << "Look out below!"
+    std::cout << "I'm flying! I'm really flying!"
               << std::endl
               << target
               << std::endl;
@@ -46,32 +42,21 @@ void FragTrap::attack2(std::string target)
 void FragTrap::attack3(std::string target)
 {
     std::cout << "RUN FOR YOUR LIIIIIVES!!!"
-              << std::endl
-              << "Oh, he's big... REALLY big!"
-              << std::endl
-              << "That guy looks an awful lot like a"
+
               << std::endl
               << target
               << std::endl;
 }
 void FragTrap::attack4(std::string target)
 {
-    std::cout << "I am a tornado of death and bullets!"
-              << std::endl
-              << "Stop me before I kill again, except don't!"
-              << std::endl
-              << "I'm on a roll!"
+    std::cout << "Stop me before I kill again, except don't!"
               << std::endl
               << target
               << std::endl;
 }
 void FragTrap::attack5(std::string target)
 {
-    std::cout << "My assets... frozen!"
-              << std::endl
-              << "I can't feel my fingers! Gah! I don't have any fingers!"
-              << std::endl
-              << "I am a robot popsicle!"
+    std::cout << "I am a robot popsicle!"
               << std::endl
               << target
               << std::endl;
@@ -95,7 +80,7 @@ FragTrap::~FragTrap()
     if (Energy_points <= 0)
         std::cout << "Bask in my aura of death!" << std::endl;
     else
-        std::cout << "ah ana mon3im ankhaliha douz from FRAGTRAP" << std::endl;
+        std::cout << "I'll die the way I lived: annoying!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string n) : name(n)

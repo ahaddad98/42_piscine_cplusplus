@@ -51,7 +51,7 @@ ScavTrap::~ScavTrap()
     if (Energy_points <= 0)
         std::cout << "Bask in my aura of death!" << std::endl;
     else
-        std::cout << "ah ana mon3im ankhaliha douz FROM SCAVTRAP" << std::endl;
+        std::cout << "I'll die the way I lived: annoying!" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string n) : name(n)

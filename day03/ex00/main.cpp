@@ -16,14 +16,11 @@ int main()
 {
     FragTrap fragtrap;
     FragTrap fragtrap1("Amine");
-    FragTrap fragtrap2("Amine1");
     fragtrap = fragtrap1;
     fragtrap.rangedAttack("mon3im");
-    fragtrap1.rangedAttack("bolles");
     fragtrap1.meleeAttack("bolles");
     fragtrap1.takeDamage(10);
     fragtrap1.beRepaired(10);
-    fragtrap1.vaulthunter_dot_exe("amine");
-    fragtrap1.vaulthunter_dot_exe("amine");
+    fragtrap1.vaulthunter_dot_exe("mout ale3doo");
     return (0);
 }
