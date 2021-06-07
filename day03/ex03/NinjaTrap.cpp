@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 21:25:30 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 12:21:06 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ NinjaTrap::NinjaTrap()
     this->Melee_attack_damage = 60;
     this->Ranged_attack_damage = 5;
     this->Armor_damage_reduction = 0;
+    std::cout << "HERE WE GO << FROM NINJATRAP >>" << std::endl;
 }
 NinjaTrap::NinjaTrap(std::string na) : ClapTrap(na)
 {
@@ -33,10 +34,12 @@ NinjaTrap::NinjaTrap(std::string na) : ClapTrap(na)
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
+    std::cout << "HERE WE GO << FROM NINJATRAP >>" << std::endl;
 }
 
 NinjaTrap::~NinjaTrap()
 {
+    std::cout << "End game << FROM NINJATRAP >>" << std::endl;
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap &N)
