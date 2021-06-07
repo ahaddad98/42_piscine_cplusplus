@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 19:57:10 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 21:18:50 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 12:27:32 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 ClapTrap::ClapTrap(/* args */)
 {
+    std::cout << "HERE WE GO << FROM CLAPTRAP >>" << std::endl;
 }
 ClapTrap::ClapTrap(std::string na) : name(na)
 {
+    std::cout << "HERE WE GO << FROM CLAPTRAP >>" << std::endl;
 }
 
 std::string ClapTrap::getname() const
@@ -27,7 +29,9 @@ std::string ClapTrap::getname() const
 
 ClapTrap::~ClapTrap()
 {
+    std::cout << "GAME OVEEER  << FROM CLAPTRAP >>" << std::endl;
 }
+
 ClapTrap::ClapTrap(const ClapTrap & f1)
 {
     std::cout << "wa 3ta9 3ta9" << std::endl;
@@ -55,7 +59,7 @@ void ClapTrap::rangedAttack(std::string const &target)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &f)
 {
-    std::cout << "Assignation operator called" << std::endl;
+    std::cout << "Assignation operator called<< FROM CLAPTRAP >>" << std::endl;
     name = f.name;
     this->Hit_points = f.Hit_points;
     this->Max_hit_points = f.Max_hit_points;

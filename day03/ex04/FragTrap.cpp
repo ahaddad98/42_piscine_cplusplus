@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 20:57:06 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 12:29:29 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ void FragTrap::attack1(std::string target)
 }
 void FragTrap::attack2(std::string target)
 {
-    std::cout << "Watch as we observe the rare and beautiful Clappy Bird!"
-              << std::endl
-              << "I'm flying! I'm really flying!"
-              << std::endl
-              << "Look out below!"
+    std::cout << "I'm flying! I'm really flying!"
               << std::endl
               << target
               << std::endl;
@@ -46,37 +42,25 @@ void FragTrap::attack2(std::string target)
 void FragTrap::attack3(std::string target)
 {
     std::cout << "RUN FOR YOUR LIIIIIVES!!!"
-              << std::endl
-              << "Oh, he's big... REALLY big!"
-              << std::endl
-              << "That guy looks an awful lot like a"
+
               << std::endl
               << target
               << std::endl;
 }
 void FragTrap::attack4(std::string target)
 {
-    std::cout << "I am a tornado of death and bullets!"
-              << std::endl
-              << "Stop me before I kill again, except don't!"
-              << std::endl
-              << "I'm on a roll!"
+    std::cout << "Stop me before I kill again, except don't!"
               << std::endl
               << target
               << std::endl;
 }
 void FragTrap::attack5(std::string target)
 {
-    std::cout << "My assets... frozen!"
-              << std::endl
-              << "I can't feel my fingers! Gah! I don't have any fingers!"
-              << std::endl
-              << "I am a robot popsicle!"
+    std::cout << "I am a robot popsicle!"
               << std::endl
               << target
               << std::endl;
 }
-
 FragTrap::FragTrap()
 {
     this->Hit_points = 100;
@@ -87,15 +71,15 @@ FragTrap::FragTrap()
     this->Melee_attack_damage = 30;
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
-    std::cout << "Look out everybody! Things are about to get awesome!" << std::endl;
+    std::cout << "Look out everybody! Things are about to get awesome!<< FROM FRAGTRAP >> " << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
     if (Energy_points <= 0)
-        std::cout << "Bask in my aura of death!" << std::endl;
+        std::cout << "Bask in my aura of death! << FROM FRAGTRAP >> " << std::endl;
     else
-        std::cout << "ah ana mon3im ankhaliha douz from FRAGTRAP" << std::endl;
+        std::cout << "ah ana mon3im ankhaliha douz from FRAGTRAP << FROM FRAGTRAP >> " << std::endl;
 }
 
 FragTrap::FragTrap(std::string n) : ClapTrap(n)
@@ -109,7 +93,7 @@ FragTrap::FragTrap(std::string n) : ClapTrap(n)
     this->Ranged_attack_damage = 20;
     this->Armor_damage_reduction = 20;
     std::cout << "Look out everybody!"
-              << "My name is " << name << ", And now, Things are about to get awesome!" << std::endl;
+              << "My name is " << name << "<< FROM FRAGTRAP >> , And now, Things are about to get awesome!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &f1)
@@ -128,7 +112,7 @@ FragTrap::FragTrap(const FragTrap &f1)
 
 FragTrap &FragTrap::operator=(const FragTrap &f)
 {
-    std::cout << "Assignation operator called" << std::endl;
+    std::cout << "Assignation operator called<< FROM FRAGTRAP >> " << std::endl;
     name = f.name;
     this->Hit_points = f.Hit_points;
     this->Max_hit_points = f.Max_hit_points;
