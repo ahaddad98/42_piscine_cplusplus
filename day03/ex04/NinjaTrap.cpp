@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 13:01:40 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 14:39:08 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,13 @@ void NinjaTrap::ninjaShoebox(ScavTrap const &scav) const
     }
     else
         std::cout << "hhhh bslama" << std::endl;
+}
+
+void NinjaTrap::rangedAttack(std::string const &target)
+{
+    std::cout << "we are in NinjaTrap ranged attack" << std::endl;
+}
+void NinjaTrap::meleeAttack(std::string const &target)
+{
+    std::cout << "we are in NinjaTrap melee attack" << std::endl;
 }

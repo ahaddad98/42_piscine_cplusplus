@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 13:01:17 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 14:38:33 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,13 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target)
     }
     else
         std::cout << "dammage less than 25" << std::endl;
+}
+
+void FragTrap::rangedAttack(std::string const &target)
+{
+    std::cout << "we are in FRAGTRAP ranged attack" << std::endl;
+}
+void FragTrap::meleeAttack(std::string const &target)
+{
+    std::cout << "we are in FRAGTRAP melee attack" << std::endl;
 }

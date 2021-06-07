@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 21:28:07 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 14:57:39 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,14 @@ SuperTrap &SuperTrap::operator=(const SuperTrap &s)
     this->Ranged_attack_damage = s.Ranged_attack_damage;
     this->Armor_damage_reduction = s.Armor_damage_reduction;
     return *this;
+}
+
+void SuperTrap::rangedAttack(std::string const &target)
+{
+    this->FragTrap::rangedAttack("something");
+}
+
+void SuperTrap::meleeAttack(std::string const &target)
+{
+    this->NinjaTrap::meleeAttack("something");
 }

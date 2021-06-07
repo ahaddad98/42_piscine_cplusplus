@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:57 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/05 18:26:20 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 14:39:22 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ public:
     SuperTrap(const SuperTrap &s);
     ~SuperTrap();
     SuperTrap &operator=(const SuperTrap &s);
+    void rangedAttack(std::string const &target);
+    void meleeAttack(std::string const &target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 12:59:31 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 15:01:35 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ NinjaTrap::NinjaTrap(const NinjaTrap &N)
     this->Armor_damage_reduction = N.Armor_damage_reduction;
 }
 
-
 NinjaTrap &NinjaTrap::operator=(const NinjaTrap & N)
 {
     name = N.name;
@@ -98,6 +97,17 @@ void     NinjaTrap::ninjaShoebox(ScavTrap const & scav) const
     {
         std::cout << this->name << " hhhhh 3andek ydorbek asahbi" << std::endl;
         std::cout << scav.getname() << " gha khalih " << std::endl;
+    }
+    else
+        std::cout << "hhhh bslama" << std::endl;   
+}
+   
+void     NinjaTrap::ninjaShoebox(NinjaTrap const & ninja) const
+{   
+    if (this->Energy_points >= 25)
+    {
+        std::cout << this->name << " hhhhh 3andek ydorbek asahbi" << std::endl;
+        std::cout << ninja.getname() << " gha khalih " << std::endl;
     }
     else
         std::cout << "hhhh bslama" << std::endl;   
