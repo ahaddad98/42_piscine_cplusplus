@@ -6,16 +6,21 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:12:53 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 15:15:21 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/07 17:26:36 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Peon.hpp"
+#ifndef PEON_H
+# define PEON_H
 
-Peon::Peon(/* args */)
+class Peon
 {
-}
+private:
+    /* data */
+public:
+    Peon(/* args */);
+    ~Peon();
+};
 
-Peon::~Peon()
-{
-}
+#endif
+

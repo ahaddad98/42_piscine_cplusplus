@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 13:54:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 14:57:39 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/10 18:09:18 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ SuperTrap &SuperTrap::operator=(const SuperTrap &s)
 
 void SuperTrap::rangedAttack(std::string const &target)
 {
-    this->FragTrap::rangedAttack("something");
+    this->FragTrap::rangedAttack(target);
 }
 
 void SuperTrap::meleeAttack(std::string const &target)
 {
-    this->NinjaTrap::meleeAttack("something");
+    this->NinjaTrap::meleeAttack(target);
 }

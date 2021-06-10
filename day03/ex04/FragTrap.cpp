@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 14:38:33 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/10 18:10:36 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,9 +151,9 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target)
 
 void FragTrap::rangedAttack(std::string const &target)
 {
-    std::cout << "we are in FRAGTRAP ranged attack" << std::endl;
+    std::cout << "we are in FRAGTRAP ranged attack" << target << std::endl;
 }
 void FragTrap::meleeAttack(std::string const &target)
 {
-    std::cout << "we are in FRAGTRAP melee attack" << std::endl;
+    std::cout << "we are in FRAGTRAP melee attack" << target <<std::endl;
 }

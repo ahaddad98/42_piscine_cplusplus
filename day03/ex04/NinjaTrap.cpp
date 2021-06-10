@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 14:39:08 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/10 18:10:16 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,12 +101,22 @@ void NinjaTrap::ninjaShoebox(ScavTrap const &scav) const
     else
         std::cout << "hhhh bslama" << std::endl;
 }
+void NinjaTrap::ninjaShoebox(NinjaTrap const &ninja) const
+{
+    if (this->Energy_points >= 25)
+    {
+        std::cout << this->name << " hhhhh 3andek ydorbek asahbi" << std::endl;
+        std::cout << ninja.getname() << " gha khalih " << std::endl;
+    }
+    else
+        std::cout << "hhhh bslama" << std::endl;
+}
 
 void NinjaTrap::rangedAttack(std::string const &target)
 {
-    std::cout << "we are in NinjaTrap ranged attack" << std::endl;
+    std::cout << "we are in NinjaTrap ranged attack" << target  <<std::endl;
 }
 void NinjaTrap::meleeAttack(std::string const &target)
 {
-    std::cout << "we are in NinjaTrap melee attack" << std::endl;
+    std::cout << "we are in NinjaTrap melee attack" << target << std::endl;
 }

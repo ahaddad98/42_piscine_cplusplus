@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 19:00:21 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 14:38:49 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/10 14:59:48 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
     void ninjaShoebox(FragTrap const & frag)const ;
     void ninjaShoebox(ClapTrap const & clap)const ;
     void ninjaShoebox(ScavTrap const & scav)const ;
+    void ninjaShoebox(NinjaTrap const & scav)const ;
 };
 
 
