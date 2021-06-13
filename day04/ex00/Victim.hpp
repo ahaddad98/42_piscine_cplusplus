@@ -12,16 +12,21 @@
 
 #ifndef VICTIM_H
 # define VICTIM_H
-
+# include "iostream"
 class Victim
 {
 private:
-    /* data */
-public:
+    std::string name;
     Victim(/* args */);
+
+public:
+    Victim(std::string na);
     Victim(const Victim & vic);
+    std::string getname() const ;
     Victim & operator=(const  Victim & vic);
     ~Victim();
 };
+
+std::ostream &  operator<<(std::ostream & os, Victim const & vic);
 
 #endif
