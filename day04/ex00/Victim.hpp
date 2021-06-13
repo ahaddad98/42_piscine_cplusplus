@@ -19,6 +19,8 @@ private:
     /* data */
 public:
     Victim(/* args */);
+    Victim(const Victim & vic);
+    Victim & operator=(const  Victim & vic);
     ~Victim();
 };
 

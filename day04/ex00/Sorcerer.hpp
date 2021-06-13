@@ -12,14 +12,21 @@
 
 #ifndef SORCERER_H
 # define SORCERER_H
-
+# include <iostream>
 class Sorcerer
 {
 private:
-    /* data */
+    std::string name;
+    std::string title;
+    Sorcerer();
 public:
-    Sorcerer(/* args */);
+    Sorcerer(std::string na, std::string tit);
+    Sorcerer(const Sorcerer &sor);
+    std::string getname() const ;
+    std::string gettitle() const;
+    Sorcerer &operator=(const Sorcerer &sor);
     ~Sorcerer();
 };
+std::ostream &  operator<<(std::ostream & o, Sorcerer const & sor);
 
 #endif
