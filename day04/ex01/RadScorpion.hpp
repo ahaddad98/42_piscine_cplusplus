@@ -12,14 +12,18 @@
 
 #ifndef RADSCORPION_H
 # define RADSCORPION_H
-
-class RadScorpion
+# include "Enemy.hpp"
+ 
+class RadScorpion : public Enemy
 {
 private:
     /* data */
 public:
     RadScorpion(/* args */);
+    RadScorpion(const RadScorpion & rad);
+    RadScorpion &operator=(const RadScorpion & rad);
     ~RadScorpion();
+
 };
 
 #endif

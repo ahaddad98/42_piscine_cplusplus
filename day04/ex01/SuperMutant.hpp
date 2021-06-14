@@ -12,14 +12,18 @@
 
 #ifndef SUPERMUTANT_H
 # define SUPERMUTANT_H
-
-class SuperMutant
+# include "Enemy.hpp"
+class SuperMutant : public Enemy
 {
 private:
     /* data */
 public:
     SuperMutant(/* args */);
+    SuperMutant(const SuperMutant & super);
+    SuperMutant &operator=(const SuperMutant & super);
     ~SuperMutant();
+
+    void takeDamage(int dam);
 };
 
 #endif

@@ -16,8 +16,8 @@
 class Enemy
 {
 protected:
-    std::string type;
     int hp;
+    std::string type;
 public:
     Enemy(/* args */);
     Enemy(const Enemy & en);
@@ -26,7 +26,7 @@ public:
     Enemy(int hit_p, std::string const & typ);
     int getHP() const;
     std::string getType() const;
-    virtual void takeDamage(int);
+    virtual void takeDamage(int dam);
 };
 
 #endif 

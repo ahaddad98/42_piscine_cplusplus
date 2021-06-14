@@ -29,6 +29,7 @@ Enemy::Enemy(const Enemy &en)
     hp = en.hp;
     type = en.type;
 }
+
 Enemy &Enemy::operator=(Enemy const en)
 {
     hp = en.hp;
@@ -40,7 +41,22 @@ int Enemy::getHP() const
 {
     return hp;
 }
+
 std::string Enemy::getType() const
 {
     return type;
+}
+
+void Enemy::takeDamage(int dam)
+{
+    if (dam > 0)
+    {
+        if (hp - dam > 0)
+            hp -= dam;
+        else
+        {
+            hp = 0;
+            std::cout << "alwadaa3" << std::endl;
+        }
+    }
 }
