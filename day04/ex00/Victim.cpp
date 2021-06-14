@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:13:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 17:22:58 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/14 16:16:38 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ std::ostream &  operator<<(std::ostream & os, Victim const & vic)
 {
     os << "I'm " << vic.getname() << " and I like otters!" << std::endl;
     return os;
+}
+
+void Victim::getPolymorphed() const
+{
+    std::cout << name << " has been turned into a cute little sheep!" << std::endl;
 }

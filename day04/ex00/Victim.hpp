@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:13:05 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 15:18:08 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/14 16:16:32 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ class Victim
 {
 private:
     std::string name;
-    Victim(/* args */);
+    Victim();
 
 public:
     Victim(std::string na);
@@ -25,6 +25,7 @@ public:
     std::string getname() const ;
     Victim & operator=(const  Victim & vic);
     ~Victim();
+    virtual void getPolymorphed() const;
 };
 
 std::ostream &  operator<<(std::ostream & os, Victim const & vic);

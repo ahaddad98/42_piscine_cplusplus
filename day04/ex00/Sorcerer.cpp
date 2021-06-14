@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:12:56 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/07 15:17:33 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/14 16:19:59 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,16 @@ std::string Sorcerer::gettitle() const
 }
 std::ostream &  operator<<(std::ostream & os, Sorcerer const & sor)
 {
-    std::cout << "I am " << sor.getname() << ", " << sor.gettitle() << ", and I like ponies!" << std::endl;
+    os << "I am " << sor.getname() << ", " << sor.gettitle() << ", and I like ponies!" << std::endl;
     return os;
+}
+
+void Sorcerer::polymorph(Victim const & vic) const
+{
+    vic.getPolymorphed();
+}
+
+void Sorcerer::polymorph(Peon const & peo) const
+{
+    peo.getPolymorphed();
 }
