@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:48:19 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/15 13:39:28 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/15 16:26:13 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 
 class ISquad
 {
-protected:
-    int count;
-    ISpaceMarine *ispa;
 public:
     virtual ~ISquad() {}
     virtual int getCount() const = 0;
