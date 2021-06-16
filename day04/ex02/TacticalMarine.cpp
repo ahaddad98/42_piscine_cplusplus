@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:47:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/15 21:50:30 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:00:03 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,22 @@
 
 TacticalMarine::TacticalMarine(/* args */)
 {
+    std::cout << "Tactical Marine ready for battle!" << std::endl;
 }
 
 TacticalMarine::~TacticalMarine()
 {
+    std::cout << "Aaargh..." <<std::endl;
+}
+
+TacticalMarine::TacticalMarine(TacticalMarine const & tact)
+{
+    *this = tact;
 }
 
 ISpaceMarine *TacticalMarine::clone() const
 {
+     return  ((ISpaceMarine*)new TacticalMarine(*this));
 }
 void TacticalMarine::battleCry() const
 {
@@ -33,5 +41,5 @@ void TacticalMarine::rangedAttack() const
 }
 void TacticalMarine::meleeAttack() const
 {
-    std::cout << "* attacks with chainfists *" << std::endl;
+    std::cout << "* attacks with a chainsword *" << std::endl;
 }

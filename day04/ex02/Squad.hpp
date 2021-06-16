@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:38:22 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/15 21:10:34 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:18:22 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ public:
     ISpaceMarine *getUnit(int) const;
     int push(ISpaceMarine *);
     ~Squad();
-    
 };
 
 #endif

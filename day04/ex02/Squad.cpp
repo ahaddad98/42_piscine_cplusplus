@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:47:40 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/15 21:36:36 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:58:42 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ Squad::Squad(/* args */)
 
 Squad::~Squad()
 {
+    t_list *tmp;
+    t_list *ispa;
+    
+    ispa = isp;
+    while (ispa)
+    {
+        tmp = ispa;
+        ispa = ispa->next;
+        delete  tmp->ispa;
+        delete tmp;
+    }
+    isp = NULL;
 }
 
 int Squad::getCount() const

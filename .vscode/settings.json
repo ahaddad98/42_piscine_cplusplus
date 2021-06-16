@@ -9,6 +9,10 @@
         "memory": "cpp",
         "ostream": "cpp",
         "streambuf": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "__bit_reference": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp",
+        "string_view": "cpp"
     }
 }
