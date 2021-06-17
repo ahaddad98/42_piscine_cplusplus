@@ -6,19 +6,20 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:46:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/17 16:23:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/17 22:36:59 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_H
 # define AMATERIA_H
+ 
 #include <iostream>
 #include "ICharacter.hpp"
 
 class AMateria
 {
-private:
-    std::string const  _type;
+protected:
+    std::string  _type;
     unsigned int _xp;
     
 public:
