@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:46:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/17 22:36:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/18 17:11:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 protected:

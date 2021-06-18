@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:48:26 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/17 23:46:15 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/18 17:11:25 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ public:
     Character(std::string name);
     ~Character();
     std::string const &getName() const;
-    // void equip(AMateria *m);
+    void equip(AMateria *m);
     void unequip(int idx);
-    void use(int idx, ICharacter &target);
+    virtual void use(int idx, ICharacter &target);
 };
 
 
