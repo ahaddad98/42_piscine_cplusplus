@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:51:16 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/18 15:48:44 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 00:26:17 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice(/* args */)
 {
-    this->_type = "Ice";
+    this->_type = "ice";
 }
 
 Ice::Ice(Ice const & cur)
@@ -35,11 +35,10 @@ Ice::~Ice()
 }
 AMateria* Ice::clone() const
 {
-    return  ((AMateria*)new Ice(*this));
+    return  ((AMateria*)new Ice());
 }
 void Ice::use(ICharacter & target)
 {
-    AMateria::use(target);
-    this->_xp += 10;
     std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
+    AMateria::use(target);
 }

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:46:02 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/18 17:11:07 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/19 23:58:37 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ public:
     virtual AMateria* clone() const = 0;
     virtual void use(ICharacter & target);
 };
+
+std::ostream &		operator << ( std::ostream& out, const AMateria & in );
 
 #endif

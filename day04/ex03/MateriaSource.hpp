@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:53:19 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/18 15:56:14 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 00:34:30 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-    /* data */
+    AMateria *amater[4];
 public:
     MateriaSource(/* args */);
     ~MateriaSource();

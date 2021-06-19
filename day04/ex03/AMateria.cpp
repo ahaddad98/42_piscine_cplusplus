@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:46:53 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/17 22:27:04 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/19 23:58:50 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,12 @@ void AMateria::use(ICharacter & target)
 {
     (void)target;
     _xp += 10;
+}
+
+std::ostream &		operator << ( std::ostream& out, const AMateria & in ) {
+
+	out << "Materia of type " << in.getType()
+		<< "; currently at " << in.getXP()
+		<< " xp" << std::endl;
+	return (out);
 }
