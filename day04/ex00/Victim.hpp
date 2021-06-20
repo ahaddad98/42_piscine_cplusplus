@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:13:05 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/14 16:16:32 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 13:58:17 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "iostream"
 class Victim
 {
-private:
+protected:
     std::string name;
     Victim();
 
@@ -24,7 +24,7 @@ public:
     Victim(const Victim & vic);
     std::string getname() const ;
     Victim & operator=(const  Victim & vic);
-    ~Victim();
+    virtual ~Victim();
     virtual void getPolymorphed() const;
 };
 
