@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 16:47:49 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/14 18:47:19 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 17:57:24 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     AWeapon(AWeapon const &wep);
     AWeapon &operator=(AWeapon const &wep);
     AWeapon(std::string const &name, int apcost, int damage);
-    ~AWeapon();
+    virtual ~AWeapon();
     std::string getName() const;
     int getAPCost() const;
     int getDamage() const;

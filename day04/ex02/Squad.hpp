@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:38:22 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/16 16:18:22 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 18:41:14 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ private:
     int count;
 public:
     Squad(/* args */);
+    Squad(Squad const &squad);
+    Squad &operator=(Squad const &squad);
     int getCount() const;
     ISpaceMarine *getUnit(int) const;
     int push(ISpaceMarine *);

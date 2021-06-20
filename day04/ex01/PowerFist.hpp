@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 16:55:33 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/14 19:33:14 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 17:47:52 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ public:
     PowerFist(/* args */);
     PowerFist(PowerFist const &pla);
     PowerFist & operator=(PowerFist const &pla);
-    ~PowerFist();
-    virtual void attack() const;
+    virtual ~PowerFist();
+    void attack() const;
 };
+
+
 
 #endif

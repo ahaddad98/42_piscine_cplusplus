@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 16:50:34 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/14 16:51:55 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 16:48:17 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 Character::Character(/* args */)
 {
+	ap = 40;
+    weapon = NULL;
 }
 
 Character::~Character()
@@ -76,7 +78,6 @@ void Character::attack(Enemy *enemy)
 			enemy->takeDamage(this->weapon->getDamage());
 			if (enemy->getHP() <= 0)
 				delete enemy;
-
 			this->ap -= this->weapon->getAPCost();
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 16:58:54 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/14 16:59:11 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 16:42:53 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void SuperMutant::takeDamage(int dam)
     else
     {
         hp = 0;
-        std::cout << "alwadaa3" << std::endl;
+        std::cout << "alwadaa3 from SuperMutant" << std::endl;
     }
 }

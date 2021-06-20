@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 00:47:40 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/16 17:05:31 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:32:43 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,64 @@ int Squad::getCount() const
 {
     return count;
 }
+
+
+Squad::Squad(Squad const &squad)
+{
+    this->count = squad.count;
+    t_list *tmp;
+    t_list *ispa;
+    
+    ispa = isp;
+    while (ispa)
+    {
+        tmp = ispa;
+        ispa = ispa->next;
+        delete  tmp->ispa;
+        delete tmp;
+    }
+    isp = NULL;
+    if (squad.isp == NULL)
+		isp = NULL;
+    else 
+    {
+		ispa = squad.isp;
+		while (ispa)
+        {
+			this->push(ispa->ispa->clone());
+			ispa = ispa->next;
+		}
+	}
+}
+Squad &Squad::operator=(Squad const &squad)
+{
+    this->count = squad.count;
+    t_list *tmp;
+    t_list *ispa;
+    
+    ispa = isp;
+    while (ispa)
+    {
+        tmp = ispa;
+        ispa = ispa->next;
+        delete  tmp->ispa;
+        delete tmp;
+    }
+    isp = NULL;
+    if (squad.isp == NULL)
+		isp = NULL;
+    else 
+    {
+		ispa = squad.isp;
+		while (ispa)
+        {
+			this->push(ispa->ispa->clone());
+			ispa = ispa->next;
+		}
+	}
+    return *this;
+}
+
 
 ISpaceMarine *Squad::getUnit(int N) const
 {
