@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:49:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/20 00:19:53 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:58:21 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,29 @@ Character::Character(/* args */)
         i++;
     }
 }
+
+Character::Character(Character const & charac)
+{
+    name = charac.name;
+    int i = 0;
+    while (charac.amater[i])
+    {
+        amater[i] = charac.amater[i];
+        i++;   
+    }
+}
+Character &Character::operator=(Character const & charac)
+{
+    name = charac.name;   
+    int i = 0;
+    while (charac.amater[i])
+    {
+        amater[i] = charac.amater[i];
+        i++;   
+    }
+    return *this;
+}
+
 
 Character::~Character()
 {
@@ -70,7 +93,7 @@ void Character::equip(AMateria *m)
 }
 void Character::unequip(int idx)
 {
-    if (idx < 0 || idx > (4 - 1))
+    if (idx < 0 || idx > 3)
 		return ;
 	amater[idx] = NULL;
 }

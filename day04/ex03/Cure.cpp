@@ -6,16 +6,15 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:50:14 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/20 00:23:15 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:48:05 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(/* args */)
+Cure::Cure()
 {
     this->_type = "cure";
-    // AMateria( "cure" );
 }
 
 Cure::Cure(Cure const & cur)

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:46:53 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/19 23:58:50 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:59:44 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,13 @@ AMateria::~AMateria()
 
 AMateria::AMateria(AMateria const & amat)
 {
+    _type = amat._type;
    _xp = amat._xp;
 }
 
 AMateria &AMateria::operator=(AMateria const & amat)
 {
+    _type = amat._type;
     _xp = amat._xp;
     return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:50:32 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/18 15:48:30 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:48:25 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ private:
     /* data */
 public:
     Ice(/* args */);
-    ~Ice();
+    virtual ~Ice();
     Ice(Ice const & cur);
     Ice &operator=(Ice const & cur);
     AMateria* clone() const;

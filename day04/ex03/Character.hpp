@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:48:26 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/20 00:19:01 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/20 23:53:13 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ private:
     AMateria *amater[4];
 public:
     Character(/* args */);
+    Character(Character const & charac);
+    Character &operator=(Character const & charac);
     Character(std::string name);
     ~Character();
     std::string const &getName() const;
