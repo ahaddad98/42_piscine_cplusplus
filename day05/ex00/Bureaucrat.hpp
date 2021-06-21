@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/22 00:21:30 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/22 00:41:49 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@
 class Bureaucrat
 {
 private:
-    /* data */
+    std::string name;
+    int grade;
 public:
     Bureaucrat(/* args */);
+    Bureaucrat(Bureaucrat const & bureauc);
+    Bureaucrat &operator=(Bureaucrat const & bureauc);
+    Bureaucrat(std::string _name, int _grade);
     ~Bureaucrat();
 };
 
