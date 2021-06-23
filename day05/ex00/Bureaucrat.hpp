@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/22 14:30:41 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/23 14:55:38 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@ class Bureaucrat
 private:
     std::string name;
     int grade;
-public:
     Bureaucrat(/* args */);
+public:
     Bureaucrat(Bureaucrat const & bureauc);
     Bureaucrat &operator=(Bureaucrat const & bureauc);
     Bureaucrat(std::string _name, int _grade);
+    std::string getname() const ;
+    int getgrade() const ;
     void  GradeTooLowException();
-    void  radeTooHighException();
+    void  GradeTooHighException();
     ~Bureaucrat();
 };
+
+std::ostream & operator  << (std::ostream  os, const Bureaucrat & bur);
 
 #endif
