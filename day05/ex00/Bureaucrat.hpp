@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/23 14:55:38 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/23 16:34:26 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ public:
     ~Bureaucrat();
 };
 
-std::ostream & operator  << (std::ostream  os, const Bureaucrat & bur);
+std::ostream &operator << ( std::ostream& out, const Bureaucrat & in );
 
 #endif

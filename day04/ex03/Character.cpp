@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 23:49:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/20 23:58:21 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/23 14:52:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,3 +108,4 @@ std::ostream &		operator << ( std::ostream& out, const Character & in )
 	out << "<Character> " << in.getName() << std::endl;
 	return (out);
 }
+

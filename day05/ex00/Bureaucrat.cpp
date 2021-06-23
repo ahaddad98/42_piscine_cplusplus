@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/23 16:17:38 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/23 16:48:03 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat(std::string _name, int _grade) : name(_name), grade(_grad
 {
     try
     {
-        if (grade < 0)
+        if (grade < 1 || grade > 150) 
             throw (grade);
     }
     catch(int garde)
@@ -57,15 +57,34 @@ int Bureaucrat::getgrade()const
 
 void  Bureaucrat::GradeTooLowException()
 {
-    
+    grade+=1;
+    try
+    {
+        if (grade < 1 || grade > 150) 
+            throw (grade);
+    }
+    catch(int garde)
+    {
+        std::cout << "error in value of " << grade << '\n';
+    }
 }
 void  Bureaucrat::GradeTooHighException()
 {
+    grade-=1;
+    try
+    {
+        if (grade < 1 || grade > 150) 
+            throw (grade);
+    }
+    catch(int garde)
+    {
+        std::cout << "error in value of " << grade << '\n';
+    }
     
 }
 
-std::ostream & operator  << (std::ostream & os, const Bureaucrat & bur)
+std::ostream &		operator << ( std::ostream& out, const Bureaucrat & in )
 {
-    os << bur.getname() << ", bureaucrat grade " << bur.getgrade() << "." << std::endl;
-    return os;
+    out << in.getname() << ", bureaucrat grade " << in.getgrade() << "." << std::endl;
+    return out;
 }
