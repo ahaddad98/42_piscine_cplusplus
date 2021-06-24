@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/23 16:48:03 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/24 16:10:45 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,11 @@
 Bureaucrat::Bureaucrat(/* args */)
 {
 }
+
 Bureaucrat::Bureaucrat(std::string _name, int _grade) : name(_name), grade(_grade)
-{
-    try
-    {
-        if (grade < 1 || grade > 150) 
-            throw (grade);
-    }
-    catch(int garde)
-    {
-        std::cout << "error in value of " << grade << '\n';
-    }
-    
+{   
+    if (grade < 1 || grade > 150) 
+        throw (GradeTooHighException());
 }
 
 Bureaucrat::~Bureaucrat()
@@ -37,12 +30,26 @@ Bureaucrat::Bureaucrat(Bureaucrat const & bureauc)
 {
     name= bureauc.name;
     grade= bureauc.grade;
+    if (grade < 1 || grade > 150) 
+        throw (GradeTooHighException());
+    
 }
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const & bureauc)
 {
     name= bureauc.name;
     grade= bureauc.grade;
+    if (grade < 1 || grade > 150) 
+        throw (GradeTooHighException());
     return *this;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+        return "GRADE TOO HIGH";
+}
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+        return "GRADE TOO LOW";
 }
 
 std::string Bureaucrat::getname() const
@@ -55,32 +62,17 @@ int Bureaucrat::getgrade()const
     return grade;
 }
 
-void  Bureaucrat::GradeTooLowException()
+void  Bureaucrat::decr()
 {
     grade+=1;
-    try
-    {
-        if (grade < 1 || grade > 150) 
-            throw (grade);
-    }
-    catch(int garde)
-    {
-        std::cout << "error in value of " << grade << '\n';
-    }
+    if (grade < 1 || grade > 150) 
+        throw (GradeTooLowException());
 }
-void  Bureaucrat::GradeTooHighException()
+void  Bureaucrat::incr()
 {
     grade-=1;
-    try
-    {
-        if (grade < 1 || grade > 150) 
-            throw (grade);
-    }
-    catch(int garde)
-    {
-        std::cout << "error in value of " << grade << '\n';
-    }
-    
+    if (getgrade() < 1 || getgrade() > 150) 
+        throw (GradeTooHighException());
 }
 
 std::ostream &		operator << ( std::ostream& out, const Bureaucrat & in )
