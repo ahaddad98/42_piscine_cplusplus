@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:32:20 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/24 21:07:23 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 00:29:33 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 # include <iostream>
 # include "Bureaucrat.hpp"
 # include <stdexcept>
+
+class Bureaucrat;
+
 class Form
 {
 private:
-    std::string const name;
-    int   grade_signed;// const
-    int   grade_executer;// const
+    const std::string name;
+    const int  grade_signed;
+    const int  grade_executer;
     bool signe;
 public:
     Form(/* args */);
-    Form(std::string _name , int _gra_sign, int _gra_exec);
-    Form(Form const &form);
+    Form(std::string _name , const int _gra_sign,const  int _gra_exec);
+    Form(const Form  &form);
     Form & operator=(Form const &form);
     ~Form();
     int getgrade_signed() const ;
