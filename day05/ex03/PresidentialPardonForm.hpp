@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/25 12:37:01 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:26:45 by ahaddad          ###   ########.fr       */
+/*   Created: 2021/06/25 12:41:39 by ahaddad           #+#    #+#             */
+/*   Updated: 2021/06/25 17:26:06 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_H
-#define SHRUBBERYCREATIONFORM_H
-#include "Form.hpp"
-#include <fstream>
+#ifndef PRESIDENTIALPARDONFORM_H
+# define PRESIDENTIALPARDONFORM_H
+# include "Form.hpp"
 
-class ShrubberyCreationForm : public Form
+class PresidentialPardonForm : Form
 {
 private:
     std::string target;
-
 public:
-    ShrubberyCreationForm(/* args */);
-    ShrubberyCreationForm(std::string target);
-    ShrubberyCreationForm(ShrubberyCreationForm const & src);
-    ShrubberyCreationForm &operator=(ShrubberyCreationForm const &src);
-    ~ShrubberyCreationForm();
-    void action() const = 0;
+    PresidentialPardonForm();
+    PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(PresidentialPardonForm const & src);
+    PresidentialPardonForm &operator=(PresidentialPardonForm const & src);
+    std::string gettarget();
+    ~PresidentialPardonForm();
+    void action() const;
+    
 };
+
 
 #endif

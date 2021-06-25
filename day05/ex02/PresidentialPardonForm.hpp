@@ -6,12 +6,12 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:41:39 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:04:54 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 17:27:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM
-# define PRESIDENTIALPARDONFORM
+#ifndef PRESIDENTIALPARDONFORM_H
+# define PRESIDENTIALPARDONFORM_H
 # include "Form.hpp"
 
 class PresidentialPardonForm : Form

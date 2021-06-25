@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/25 12:37:01 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:26:45 by ahaddad          ###   ########.fr       */
+/*   Created: 2021/06/25 12:39:52 by ahaddad           #+#    #+#             */
+/*   Updated: 2021/06/25 17:26:28 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_H
-#define SHRUBBERYCREATIONFORM_H
-#include "Form.hpp"
-#include <fstream>
-
-class ShrubberyCreationForm : public Form
+#ifndef ROBOTOMYREQUESTFORM_H
+# define ROBOTOMYREQUESTFORM_H
+# include "Form.hpp"
+ 
+class RobotomyRequestForm : public Form
 {
 private:
     std::string target;
-
 public:
-    ShrubberyCreationForm(/* args */);
-    ShrubberyCreationForm(std::string target);
-    ShrubberyCreationForm(ShrubberyCreationForm const & src);
-    ShrubberyCreationForm &operator=(ShrubberyCreationForm const &src);
-    ~ShrubberyCreationForm();
-    void action() const = 0;
+    RobotomyRequestForm(/* args */);
+    RobotomyRequestForm(std::string _target);
+    RobotomyRequestForm(RobotomyRequestForm const &src);
+    RobotomyRequestForm &operator=(RobotomyRequestForm const &src);
+    ~RobotomyRequestForm();
+    std::string gettarget();
+    void action() const;
+    
 };
-
 #endif
