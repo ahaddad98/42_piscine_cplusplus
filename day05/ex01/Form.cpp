@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:33:56 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 00:16:15 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 12:30:22 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,21 +69,25 @@ std::string Form::getname() const
 {
     return name;
 }
+bool Form::getsigne() const
+{
+    return signe;
+}
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
-    os << "amine " << form.getname() << std::endl;
+    os << "the form " << form.getname() << std::endl
+        << " with his grade " << form.getgrade_signed() << std::endl;
     return os;
 }
 
 void Form::beSigned(Bureaucrat const & bur)
 {
-    if (bur.getgrade() >= grade_signed)
-    {
+    if (bur.getgrade() < grade_signed)
         signe = true;
-    }
     else
     {
         signe = false;
+        throw(GradeTooLowException());
     }
 }
 

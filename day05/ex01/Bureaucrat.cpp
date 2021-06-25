@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/24 16:10:45 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 12:27:05 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,18 @@ void  Bureaucrat::incr()
     grade-=1;
     if (getgrade() < 1 || getgrade() > 150) 
         throw (GradeTooHighException());
+}
+
+void	Bureaucrat::signForm (Form & form)
+{
+    if (form.getsigne() == true)
+    {
+        std::cout << this->getname() << " signs " << form.getname() << std::endl;
+    }
+    else
+    {
+        std::cout <<  this->getname() << " cant sign " << form.getname() << " because grade too low" << std::endl; 
+    }
 }
 
 std::ostream &		operator << ( std::ostream& out, const Bureaucrat & in )
