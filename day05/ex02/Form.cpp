@@ -6,13 +6,13 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:33:56 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 12:30:22 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 17:20:25 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string _name,const int _gra_sign,const int _gra_exec) : name(_name), grade_signed(_gra_sign), grade_executer(_gra_exec)
+Form::Form(std::string _name, const int _gra_sign, const int _gra_exec) : name(_name), grade_signed(_gra_sign), grade_executer(_gra_exec)
 {
     if (grade_signed < 1)
         throw(GradeTooHighException());
@@ -30,7 +30,7 @@ Form::~Form()
 }
 
 Form::Form(const Form &form)
- : name(form.name) , grade_signed(form.grade_signed), grade_executer(form.grade_executer)
+    : name(form.name), grade_signed(form.grade_signed), grade_executer(form.grade_executer)
 {
     signe = form.signe;
     if (grade_signed < 1)
@@ -43,7 +43,7 @@ Form::Form(const Form &form)
         throw(GradeTooLowException());
 }
 
-Form &Form::operator=(Form const & form)
+Form &Form::operator=(Form const &form)
 {
     signe = form.signe;
     if (grade_signed < 1)
@@ -76,11 +76,11 @@ bool Form::getsigne() const
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
     os << "the form " << form.getname() << std::endl
-        << " with his grade " << form.getgrade_signed() << std::endl;
+       << " with his grade " << form.getgrade_signed() << std::endl;
     return os;
 }
 
-void Form::beSigned(Bureaucrat const & bur)
+void Form::beSigned(Bureaucrat const &bur)
 {
     if (bur.getgrade() < grade_signed)
         signe = true;
@@ -98,4 +98,21 @@ const char *Form::GradeTooHighException::what() const throw()
 const char *Form::GradeTooLowException::what() const throw()
 {
     return "GRADE TO LOW";
+}
+const char *Form::UnsignedForm::what() const throw()
+{
+    return "UnsignedForm";
+}
+
+void Form::execute(Bureaucrat const & executor) const 
+{
+    if ((signe) == false)
+        throw UnsignedForm();
+    if (executor.getgrade() <= this->getgrade_executer())
+    {
+        action();
+    }
+    else
+        throw GradeTooLowException();
+    
 }

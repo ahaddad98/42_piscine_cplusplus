@@ -6,20 +6,27 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:41:39 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 12:42:33 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 17:04:54 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM
 # define PRESIDENTIALPARDONFORM
+# include "Form.hpp"
 
-class PresidentialPardonForm
+class PresidentialPardonForm : Form
 {
 private:
-    /* data */
+    std::string target;
 public:
-    PresidentialPardonForm(/* args */);
+    PresidentialPardonForm();
+    PresidentialPardonForm(std::string target);
+    PresidentialPardonForm(PresidentialPardonForm const & src);
+    PresidentialPardonForm &operator=(PresidentialPardonForm const & src);
+    std::string gettarget();
     ~PresidentialPardonForm();
+    void action() const;
+    
 };
 
 

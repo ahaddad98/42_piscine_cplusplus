@@ -6,19 +6,26 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:39:52 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 12:41:24 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/25 17:04:04 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ROBOTOMY_REQUEST_FORM
 # define ROBOTOMY_REQUEST_FORM
-
-class RobotomyRequestForm
+# include "Form.hpp"
+ 
+class RobotomyRequestForm : public Form
 {
 private:
-    /* data */
+    std::string target;
 public:
     RobotomyRequestForm(/* args */);
+    RobotomyRequestForm(std::string _target);
+    RobotomyRequestForm(RobotomyRequestForm const &src);
+    RobotomyRequestForm &operator=(RobotomyRequestForm const &src);
     ~RobotomyRequestForm();
+    std::string gettarget();
+    void action() const;
+    
 };
 #endif
