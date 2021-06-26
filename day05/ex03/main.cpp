@@ -6,29 +6,26 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:07 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:06:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 00:24:53 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
+#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-    try
-    {
-        Bureaucrat sejuani("sejuani",1);
-        RobotomyRequestForm a("tcharaye7");
-        a.action();
-        // Form form1("samir", 2, 20);
-        // form1.beSigned(sejuani);
-        // std::cout << form1;
-        // sejuani.signForm(form1);
-
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+	Bureaucrat	person_1( "Amine", 1   );
+	Intern		intern;
+	Form	*form_1 = intern.makeForm("shrubbery creation", "target1");
+	Form	*form_2 = intern.makeForm("robotomy request", "target2");
+	Form	*form_3 = intern.makeForm("presidential pardon", "target3");
+	std::cout << *form_1 ;
+	std::cout << *form_2 ;
+	std::cout << *form_3 ;
     return (0);
 }
