@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:12 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/24 16:10:45 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 14:23:18 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@ Bureaucrat::Bureaucrat(Bureaucrat const & bureauc)
 {
     name= bureauc.name;
     grade= bureauc.grade;
-    if (grade < 1 || grade > 150) 
-        throw (GradeTooHighException());
-    
+    if (grade > 150) 
+        throw (GradeTooLowException());
+    if (grade < 1) 
+        throw (GradeTooHighException());   
 }
+
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const & bureauc)
 {
     name= bureauc.name;
@@ -65,13 +67,13 @@ int Bureaucrat::getgrade()const
 void  Bureaucrat::decr()
 {
     grade+=1;
-    if (grade < 1 || grade > 150) 
+    if (grade > 150) 
         throw (GradeTooLowException());
 }
 void  Bureaucrat::incr()
 {
     grade-=1;
-    if (getgrade() < 1 || getgrade() > 150) 
+    if (grade < 1) 
         throw (GradeTooHighException());
 }
 
