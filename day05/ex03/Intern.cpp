@@ -6,35 +6,37 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:25:20 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 14:02:14 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:57:04 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
-Form* shrubberycreatioform(std::string  target) {
-	return (Form *)new ShrubberyCreationForm(target);
-}
-
-Form* presdentialpardonform(std::string target)
+Form *shrubberycreatioform(std::string target)
 {
-    return (Form*)new PresidentialPardonForm(target);
+    return (Form *)new ShrubberyCreationForm(target);
 }
 
-Form* Robotomyrequestform(std::string target) {
-	return new RobotomyRequestForm(target);
-}
-
-Form	*Intern::makeForm(std::string _name, std::string target) const
+Form *presdentialpardonform(std::string target)
 {
-	std::string name[] = {"shrubbery creation", "presidential pardon", "robotomy request"};
-    forms _forms[3] = { shrubberycreatioform,presdentialpardonform,Robotomyrequestform};
+    return (Form *)new PresidentialPardonForm(target);
+}
+
+Form *Robotomyrequestform(std::string target)
+{
+    return (Form *)new RobotomyRequestForm(target);
+}
+
+Form *Intern::makeForm(std::string _name, std::string target) const
+{
+    std::string name[] = {"shrubbery creation", "presidential pardon", "robotomy request"};
+    forms _forms[3] = {shrubberycreatioform, presdentialpardonform, Robotomyrequestform};
     int i = 0;
     while (i < 3)
     {
         if (!name[i].compare(_name))
         {
-            std::cout << name[i] << " targeted on " << target <<std::endl;
+            std::cout << name[i] << " targeted on " << target << std::endl;
             return _forms[i](target);
             break;
         }
@@ -57,12 +59,11 @@ Intern &Intern::operator=(Intern const &src)
     return *this;
 }
 
-
 Intern::~Intern()
 {
 }
 
 const char *Intern::failedform::what() const throw()
 {
-        return "Form not existe";
+    return "Form not existe";
 }

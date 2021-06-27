@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:33:56 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 13:46:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:52:05 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,27 +75,16 @@ bool Form::getsigne() const
 }
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
-    if (&form != nullptr)
-    {
-        os << "the form " << form.getname() << std::endl
-           << " with his grade " << form.getgrade_signed() << std::endl;
-    }
-    else
-    {
-        std::cout << "form not existe" << std::endl;
-    }
+    os << "the form " << form.getname() << " with his grade " << form.getgrade_signed() << std::endl;
     return os;
 }
 
 void Form::beSigned(Bureaucrat const &bur)
 {
-    if (bur.getgrade() < grade_signed)
+    if (bur.getgrade() <= grade_signed)
         signe = true;
     else
-    {
-        signe = false;
         throw(GradeTooLowException());
-    }
 }
 
 const char *Form::GradeTooHighException::what() const throw()
@@ -113,12 +102,17 @@ const char *Form::UnsignedForm::what() const throw()
 
 void Form::execute(Bureaucrat const &executor) const
 {
-    if ((signe) == false)
-        throw UnsignedForm();
-    if (executor.getgrade() <= this->getgrade_executer())
+    try
     {
-        action();
+        if (executor.getgrade() <= this->getgrade_executer())
+        {
+            action();
+        }
+        else
+            throw UnsignedForm();
     }
-    else
-        throw GradeTooLowException();
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }
