@@ -6,18 +6,29 @@
 #    By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 16:12:42 by ahaddad           #+#    #+#              #
-#    Updated: 2021/06/27 16:14:14 by ahaddad          ###   ########.fr        #
+#    Updated: 2021/06/27 16:19:38 by ahaddad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex03
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 		Bureaucrat.cpp \
+		Form.cpp \
+		PresidentialPardonForm.cpp\
+		RobotomyRequestForm.cpp\
+		ShrubberyCreationForm.cpp\
+		Intern.cpp
+		
 			
-HDRS = Bureaucrat.hpp
+HDRS = Bureaucrat.hpp \
+		Form.hpp \
+		PresidentialPardonForm.hpp\
+		RobotomyRequestForm.hpp\
+		ShrubberyCreationForm.hpp\
+		Intern.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

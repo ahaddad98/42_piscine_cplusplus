@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:07 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 15:46:39 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 16:22:51 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
     try
     {
         Bureaucrat sejuani("kilua", 1);
-        Form *shru = new ShrubberyCreationForm("pito");
+        Form *shru = new ShrubberyCreationForm("bob");
         shru->action();
         shru->beSigned(sejuani);
         RobotomyRequestForm robo("Gon");

@@ -6,18 +6,20 @@
 #    By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 16:12:42 by ahaddad           #+#    #+#              #
-#    Updated: 2021/06/27 16:14:14 by ahaddad          ###   ########.fr        #
+#    Updated: 2021/06/27 16:16:20 by ahaddad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex01
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 		Bureaucrat.cpp \
+		Form.cpp
 			
-HDRS = Bureaucrat.hpp
+HDRS = Bureaucrat.hpp \
+		Form.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
