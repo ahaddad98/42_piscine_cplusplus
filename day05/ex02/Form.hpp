@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:32:20 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:09:21 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:27:20 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
     bool getsigne() const;
     int getgrade_executer() const;
     std::string getname() const;
-    void beSigned(Bureaucrat const &bur);
+     void beSigned(Bureaucrat const &bur);
     class GradeTooHighException : public std::exception
     {
         virtual const char *what() const throw();

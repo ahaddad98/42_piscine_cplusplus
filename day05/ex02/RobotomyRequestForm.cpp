@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:41:11 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:04:35 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:04:44 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void RobotomyRequestForm::action() const
     srand(time(0));
     r = rand() % 2;
     if (r == 0)
-        std::cout << target << "> has been robotomized successfully" << std::endl;
+        std::cout << target << " has been robotomized successfully" << std::endl;
     else    
-        std::cout << target << "> has been robotomized failure" << std::endl;
+        std::cout << target << " has been robotomized failure" << std::endl;
 }

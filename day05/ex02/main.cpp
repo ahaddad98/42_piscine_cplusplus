@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:07 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 14:07:30 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:46:39 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,22 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-
 int main()
 {
     try
     {
-        Bureaucrat sejuani("kilua",2);
-        ShrubberyCreationForm shru("tcharaye7");
-        shru.action();
-        PresidentialPardonForm pres("hisoka");
-        pres.action();
+        Bureaucrat sejuani("kilua", 1);
+        Form *shru = new ShrubberyCreationForm("pito");
+        shru->action();
+        shru->beSigned(sejuani);
         RobotomyRequestForm robo("Gon");
-        robo.action();   
+        robo.action();
+        robo.beSigned(sejuani);
+        Form *pres = new PresidentialPardonForm("hisoka");
+        pres->action();
+        pres->beSigned(sejuani);
     }
-    catch(std::exception &e)
+    catch (std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }

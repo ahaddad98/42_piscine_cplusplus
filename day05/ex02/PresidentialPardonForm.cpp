@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:42:24 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:05:07 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:35:24 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm
 
 void PresidentialPardonForm::action() const
 {
-    std::cout << target << " has been pardoned by Zafod Beeblebrox" <<std::endl;
+    std::cout << target << " has been pardoned by Zafod Beeblebrox" << std::endl;
 }

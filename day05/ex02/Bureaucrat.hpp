@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 00:20:09 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:27:17 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 15:31:31 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ public:
     int getgrade() const;
     void incr();
     void decr();
-    void	signForm (Form & form); 
+    void	signForm (Form  & form) const; 
     ~Bureaucrat();
 };
 
