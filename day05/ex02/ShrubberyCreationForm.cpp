@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:39:10 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:03:35 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 12:38:59 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,16 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 void ShrubberyCreationForm::action() const 
 {
     std::ofstream MyFile(target);
-    MyFile << "hhhhhhh chajra";
+        MyFile <<"               ,@@@@@@@," << std::endl
+<< "       ,,,.   ,@@@@@@/@@,  .oo8888o.    " << std::endl
+<< "    ,&%%&%&&%,@@@@@/@@@@@@,8888&&8/8o   "<< std::endl
+<< "   ,%&&&&&%&&%,@@@&&@@/@@@88&&8888/88'  " << std::endl
+<< "   %&&%&%&/%&&%@@&&@/ /@@@88888&&8888'  " << std::endl
+<< "   %&&%/ %&%%&&@@\\ V /@@' `88&& `/88'   " << std::endl
+<< "   `&%\\ ` /%&'    |.|        \\ '|8'     " << std::endl
+<< "       |o|        | |         | |       " << std::endl 
+<< "       |.|        | |         | |       " << std::endl
+<< " \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_  " << std::endl;
     MyFile.close();
 }
 

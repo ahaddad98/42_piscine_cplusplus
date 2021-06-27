@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 12:37:01 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:26:45 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 12:28:54 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ShrubberyCreationForm(ShrubberyCreationForm const & src);
     ShrubberyCreationForm &operator=(ShrubberyCreationForm const &src);
     ~ShrubberyCreationForm();
-    void action() const = 0;
+    void action() const;
 };
 
 #endif
