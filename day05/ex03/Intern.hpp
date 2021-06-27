@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:24:49 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 00:02:29 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 13:59:58 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ public:
     Intern &operator=(Intern const &src);
     Form *makeForm(std::string name, std::string target) const ;
     ~Intern();
+    class failedform : public std::exception
+    {
+        virtual const char *what() const throw();
+    };
 };
 
 typedef Form	*(*forms) (std::string target);

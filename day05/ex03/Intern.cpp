@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:25:20 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 00:07:01 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 14:02:14 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,29 @@ Form	*Intern::makeForm(std::string _name, std::string target) const
         }
         i++;
     }
+    throw failedform();
     return NULL;
 }
 
 Intern::Intern(/* args */)
 {
 }
+Intern::Intern(Intern const &src)
+{
+    *this = src;
+}
+Intern &Intern::operator=(Intern const &src)
+{
+    (void)src;
+    return *this;
+}
+
 
 Intern::~Intern()
 {
+}
+
+const char *Intern::failedform::what() const throw()
+{
+        return "Form not existe";
 }

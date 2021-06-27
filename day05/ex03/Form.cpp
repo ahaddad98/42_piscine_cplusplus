@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:33:56 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/25 17:20:25 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 13:46:27 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,15 @@ bool Form::getsigne() const
 }
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
-    os << "the form " << form.getname() << std::endl
-       << " with his grade " << form.getgrade_signed() << std::endl;
+    if (&form != nullptr)
+    {
+        os << "the form " << form.getname() << std::endl
+           << " with his grade " << form.getgrade_signed() << std::endl;
+    }
+    else
+    {
+        std::cout << "form not existe" << std::endl;
+    }
     return os;
 }
 
@@ -104,7 +111,7 @@ const char *Form::UnsignedForm::what() const throw()
     return "UnsignedForm";
 }
 
-void Form::execute(Bureaucrat const & executor) const 
+void Form::execute(Bureaucrat const &executor) const
 {
     if ((signe) == false)
         throw UnsignedForm();
@@ -114,5 +121,4 @@ void Form::execute(Bureaucrat const & executor) const
     }
     else
         throw GradeTooLowException();
-    
 }
