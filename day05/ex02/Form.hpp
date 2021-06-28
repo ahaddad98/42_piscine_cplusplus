@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:32:20 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/27 15:27:20 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/27 16:37:59 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     Form(std::string _name, const int _gra_sign, const int _gra_exec);
     Form(const Form &form);
     Form &operator=(Form const &form);
-    ~Form();
+    virtual ~Form();
     int getgrade_signed() const;
     bool getsigne() const;
     int getgrade_executer() const;
