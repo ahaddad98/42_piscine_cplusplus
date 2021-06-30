@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 11:58:45 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/30 13:43:40 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/30 19:20:56 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,33 @@
 #include <cstring>
 #include <stdexcept>
 
-int             check_argument(std::string str)
+int check_argument(std::string str)
 {
-    int len;
-    len = str.length();
+    int index = 0;
+    int check_is_valide = 0;
+    int len = str.length();
+    int check_point = 0;
+    int check_float = 0;
+    while (index < len)
+    {
+        if (!isdigit(str[index]))
+            check_is_valide++;
+        index++;
+    }
+    if (check_is_valide == len)
+        return (1);
+    else
+    {
+        if (check_is_valide > 2)
+            return (1);
+        else
+        {
+            check_float = str.find('f');
+            check_point = str.find('.');
+            if (check_float == -1  || check_point == -1 )
+                return (1);
+        }
+    }
     return (0);
 }
 
@@ -29,21 +52,27 @@ int main(int ac, char **av)
     double _double;
     int is_point = 0;
     int is_decimale = 0;
-    int i = 0;
-    
+
     if (ac != 2)
     {
         std::cout << "Error in parametere" << std::endl;
         return 0;
     }
     std::string str(av[1]);
+    if (check_argument(str) == 1)
+    {
+        std::cout << "char: impossible" << std::endl
+                  << "int: impossible" << std::endl
+                  << "float: nanf" << std::endl
+                  << "double: non" << std::endl;  
+        return 0;
+    }
     is_point = str.find('.');
     if (is_point != -1)
     {
-        while (str[i] && isdigit(str[i]))
+        while (str[++is_point] && isdigit(str[is_point]))
         {
-            is_decimale++;
-            i++;
+            ++is_decimale;
         }
     }
     else
@@ -53,7 +82,9 @@ int main(int ac, char **av)
     try
     {
         _char = static_cast<char>(std::stoi(str));
-        if (_char <= 32)
+        if (std::stoi(str) > 127)
+            std::cout << "char: impossible" << std::endl;
+        else if (_char <= 32)
             std::cout << "char: non displayable" << std::endl;
         else
             std::cout << "char: \'" << _char << "\'" << std::endl;
