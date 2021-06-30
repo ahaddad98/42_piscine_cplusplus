@@ -6,14 +6,20 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 11:58:45 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/06/28 12:00:40 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/06/29 16:18:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main()
+int main(int ac, char **av)
 {
-    std::cout << "amine haddad" << std::endl;
+    std::string str;
+    if (ac == 2)
+    {
+        str = av[1];
+        if (str.length() != 0)
+            std::cout << av[1] << std::endl;
+    }
     return 0;
 }

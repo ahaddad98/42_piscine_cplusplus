@@ -6,19 +6,17 @@
 #    By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 16:12:42 by ahaddad           #+#    #+#              #
-#    Updated: 2021/06/28 11:58:23 by ahaddad          ###   ########.fr        #
+#    Updated: 2021/06/29 16:14:47 by ahaddad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = convert
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
-
-			
+		
 HDRS= 
-
 
 OBJS = $(SRCS:.cpp=.o)
 
