@@ -6,7 +6,7 @@
 #    By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 16:12:42 by ahaddad           #+#    #+#              #
-#    Updated: 2021/07/01 16:41:42 by ahaddad          ###   ########.fr        #
+#    Updated: 2021/07/01 18:52:03 by ahaddad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ NAME = Identify_real_type
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
+		Base.cpp \
 		
-		
-HDRS= 
+HDRS= Base.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
