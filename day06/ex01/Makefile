@@ -6,7 +6,7 @@
 #    By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/27 16:12:42 by ahaddad           #+#    #+#              #
-#    Updated: 2021/06/30 19:25:43 by ahaddad          ###   ########.fr        #
+#    Updated: 2021/07/01 16:37:58 by ahaddad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,10 @@ NAME = Serialization
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
+		Data.cpp \
 		
-HDRS= 
+		
+HDRS= Data.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
