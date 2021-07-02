@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 11:58:45 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/02 18:59:54 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/03 00:06:34 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int check_argument(std::string str)
         {
             check_float = str.find('f');
             check_point = str.find('.');
-            if (check_float == -1 || check_point == -1)
+            if (check_float == -1 && check_point == -1)
                 return (1);
         }
     }
@@ -100,7 +100,7 @@ int main(int ac, char **av)
         std::cout << "char: impossible" << std::endl
                   << "int: impossible" << std::endl
                   << "float: nanf" << std::endl
-                  << "double: non" << std::endl;
+                  << "double: nan" << std::endl;
         return 0;
     }
     if (check_argument(str) == 1)
