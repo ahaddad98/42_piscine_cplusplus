@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 16:41:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/02 13:48:29 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/02 14:49:15 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,27 @@ Base *generate(void)
     srand(time(0));
     int r = rand() % 3;
     if (r == 0)
+    {
+        std::cout << "A" << std::endl;
         return new A;
+    }
     if (r == 1)
+    {
+        std::cout << "B" << std::endl;
         return new B;
+    }
     if (r == 2)
+    {
+        std::cout << "C" << std::endl;
         return new C;
+    }
     return NULL;
 }
 
-void identify_pointer(Base *p)
+void identify(Base *p)
 {
     A *_a;
-    _a= dynamic_cast<A *>(p);
+    _a = dynamic_cast<A *>(p);
     if (_a != NULL)
     {
         std::cout << "A" << std::endl;
@@ -52,7 +61,7 @@ void identify_pointer(Base *p)
     std::cout << "Not A not B and not C" << std::endl;
 }
 
-void identify_refernce(Base &p)
+void identify(Base &p)
 {
     try
     {
@@ -62,7 +71,7 @@ void identify_refernce(Base &p)
     }
     catch (std::bad_cast &e)
     {
-        std::cerr << e.what() << std::endl;
+        (void)e;
     }
     try
     {
@@ -72,7 +81,7 @@ void identify_refernce(Base &p)
     }
     catch (std::bad_cast &e)
     {
-        std::cerr << e.what() << std::endl;
+        (void)e;
     }
     try
     {
@@ -82,21 +91,17 @@ void identify_refernce(Base &p)
     }
     catch (std::bad_cast &e)
     {
-        std::cerr << e.what() << std::endl;
+        (void)e;
     }
 }
 
 int main()
 {
     std::cout << "/**************** Random instanciate ************************/" << std::endl;
-    std::cout << generate() << std::endl;
-   std::cout << "/***************** identifypointer **************************/" << std::endl;
-    identify_pointer(new A);
-    identify_pointer(new B);
-    identify_pointer(new C);
+    Base *base = generate();
+    std::cout << "/***************** identifypointer **************************/" << std::endl;
+    identify(base);
     std::cout << "/***************** identify Referende ***********************/" << std::endl;
-    identify_refernce(*(new A));
-    identify_refernce(*(new B));
-    identify_refernce(*(new C));
+    identify(*base);
     return 0;
 }
