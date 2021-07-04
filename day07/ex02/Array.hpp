@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 00:55:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/04 17:50:44 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/04 23:44:51 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,15 @@ private:
 public:
     Array<T>(/* args */);
     Array<T>(unsigned int _n);
+    Array<T>(Array<T> const & T);
+    Array<T> &operator=(Array<T> const & T);
+    int size() const {
+    return length;
+    }
     ~Array<T>();
 };
 template<typename T>
-Array<T>::Array() : _array(new T[0])
+Array<T>::Array() : _array(new T[0]) , length(0)
 {
 }
 
@@ -38,7 +43,7 @@ Array<T>::Array(unsigned int _n) : _array( new T(_n)) , length(_n)
     int i = 0;
     while (i < length)
     {
-        _array[i] = 0;
+        _array[i] = T();
         i++;
     }
 }
