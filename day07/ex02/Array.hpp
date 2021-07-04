@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 00:55:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/04 17:42:17 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/04 17:50:44 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template<typename T>
 class Array
 {
 private:
-    unsigned int n;
+    unsigned int length;
     T *_array;
 public:
     Array<T>(/* args */);
@@ -33,8 +33,14 @@ Array<T>::Array() : _array(new T[0])
 }
 
 template<typename T>
-Array<T>::Array(unsigned int _n) : _array( new T(_n))
+Array<T>::Array(unsigned int _n) : _array( new T(_n)) , length(_n)
 {
+    int i = 0;
+    while (i < length)
+    {
+        _array[i] = 0;
+        i++;
+    }
 }
 
 #endif
