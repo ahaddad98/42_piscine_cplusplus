@@ -6,9 +6,14 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 00:55:51 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/04 00:56:00 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/04 14:05:23 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
+int main()
+{
+    std::cout << "amine haddad" << std::endl;
+    return 0;
+}
