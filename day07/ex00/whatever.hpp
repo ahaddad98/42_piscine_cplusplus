@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 00:38:48 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/04 00:19:56 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/05 18:07:11 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 template<typename T>
 T max(T const &x , T const & y)
 {
-    return ((x>y) ? x : y);
+    return ((x>=y) ? x : y);
 }
 
 template<typename T>
 T min(T const &x , T const & y)
 {
-    return ((x<y) ? x : y);
+    return ((x<=y) ? x : y);
 }
 
 template<typename T>

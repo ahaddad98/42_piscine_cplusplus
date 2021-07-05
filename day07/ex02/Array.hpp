@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 00:55:18 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/05 16:51:27 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/05 17:59:15 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ template <typename T>
 class Array
 {
 private:
-    int length;
+    unsigned int length;
     T *_array;
 
 public:
@@ -31,15 +31,26 @@ public:
             return "error in index";
         }
     };
+    // class Errorinlength : public std::exception
+    // {
+    //     virtual const char *what() const throw()
+    //     {
+    //         return "error in length";
+    //     }
+    // };
 
     /*****************************constructors**************************************/
-    Array<T>(/* args */) : length(0), _array(nullptr)
+    Array<T>(/* args */)
     {
+        _array = new T[0];
+        length = 0;
     }
 
-    Array<T>(unsigned int _n) : length(_n), _array(new T(length))
+    Array<T>(unsigned int _n)
     {
-        int i = 0;
+        length = _n;
+        _array = new T[length];
+        unsigned int i = 0;
         while (i < length)
         {
             _array[i] = 0;
@@ -53,37 +64,18 @@ public:
     }
     Array<T> &operator=(Array<T> const &array)
     {
-        if (this != &array)
+        length = array.length;
+        _array = new T[array.length];
+        unsigned int i = 0;
+        while (i < length)
         {
-            // if (length != array.length)
-            // {
-            //     if (_array != nullptr)
-            //     {
-            //         // delete[] _array;
-            //         // std::cout << "amine haddad" << std::endl;
-            //         length = 0;
-            //         _array = nullptr;
-            //     }
-                _array = new T[array.length];
-                int i = 0;
-                while (i < array.length)
-                {
-                    _array[i] = array[i];
-                    i++;
-                }
-            // }
+            _array[i] = array._array[i];
+            i++;
         }
         return *this;
     }
     /***************************operatot [] ******************************************/
-    T &operator[](int index)
-    {
-        if (index < 0 || index > length)
-            throw Errorinindex();
-        else
-            return _array[index];
-    }
-    T const &operator[](int index) const
+    T &operator[](unsigned int index)
     {
         if (index < 0 || index >= length)
             throw Errorinindex();
@@ -98,15 +90,8 @@ public:
     /***************************** destrucor *****************************************/
     ~Array<T>()
     {
-            delete[] _array;
+        delete[] _array;
     }
 };
-
-template <typename T>
-std::ostream &operator<<(std::ostream &out, Array<T> const &p)
-{
-    out << "the size of array is " << p.size() << std::endl;
-    return out;
-}
 
 #endif
