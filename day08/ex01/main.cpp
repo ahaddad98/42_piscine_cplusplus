@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:44:55 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/06 12:45:35 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/07 00:54:07 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main()
 {
-    std::cout << "amine haddad" << std::endl;
+    span sp(10);
     return 0;
 }
