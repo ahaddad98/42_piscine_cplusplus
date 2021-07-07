@@ -6,60 +6,95 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:44:23 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/07 00:57:16 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/07 13:13:33 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
 
-span::span(/* args */)
+Span::Span(/* args */)
+{
+    n = 0;
+}
+
+Span::Span(unsigned int _n) : n(_n)
 {
 }
 
-span::span(unsigned int _n) : n(_n)
-{
-}
-
-span::span(span const & src)
+Span::Span(Span const &src)
 {
     *this = src;
 }
 
-span &span::operator=(span const & src)
+Span &Span::operator=(Span const &src)
 {
     n = src.n;
     return *this;
 }
 
-span::~span()
+Span::~Span()
 {
 }
 
-void	span::addNumber(int number)
+void Span::addNumber(int number)
 {
-    if (vect.size() >= n)
-        throw failedtoaddelement();
-    else
+    try
+    {
+        if (vect.size() >= n)
+            throw failedtoaddelement();
         vect.push_back(number);
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }
 
-const char *span::failedtoaddelement::what() const throw()
+const char *Span::failedtoaddelement::what() const throw()
 {
-    return "failed to add element"; 
+    return "failed to add element";
 }
 
-int span::shortestSpan()
+int Span::shortestSpan()
 {
-    return *min_element(vect.begin(), vect.end());
+    int i = 0;
+    int small_diff = 0;
+    int j;
+    if (vect.size() == 0)
+        throw failedtoaddelement();
+    if (vect.size() == 1)
+        return vect[0];
+    if (vect[0] > vect[1])
+        small_diff = vect[0] - vect[1];
+    if (vect[0] < vect[1])
+        small_diff = vect[1] - vect[0];
+    while (i < (int)vect.size())
+    {
+        j = i + 1;
+        while (j < (int)vect.size())
+        {
+            if (vect[i] > vect[j])
+            {
+                if (small_diff > (vect[i] - vect[j]))
+                    small_diff = vect[i] - vect[j];
+            }
+            else if (vect[i] < vect[j])
+            {
+                if (small_diff > (vect[j] - vect[j]))
+                    small_diff = vect[j] - vect[i];
+            }
+            else
+                small_diff = 0;
+            j++;
+        }
+        i++;
+    }
+    return small_diff;
 }
-int span::longestSpan()
+
+int Span::longestSpan()
 {
     int min = *min_element(vect.begin(), vect.end());
     int max = *max_element(vect.begin(), vect.end());
     return (max - min);
-}
-
-void span::setvect(std::vector<int> _vect)
-{
-    vect = _vect;
 }
