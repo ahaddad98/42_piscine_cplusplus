@@ -6,17 +6,9 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:47:04 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/06 12:47:25 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/07 20:11:34 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mutantstack.hpp"
 
-
-mutantstack::mutantstack(/* args */)
-{
-}
-
-mutantstack::~mutantstack()
-{
-}
+/* Everything is made as a template so nothing here ; see mutantstack.hpp */
