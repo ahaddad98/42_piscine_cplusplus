@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:44:23 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/07 13:13:33 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/07 20:14:45 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,8 @@ int Span::shortestSpan()
     int i = 0;
     int small_diff = 0;
     int j;
-    if (vect.size() == 0)
+    if (vect.size() < 2)
         throw failedtoaddelement();
-    if (vect.size() == 1)
-        return vect[0];
     if (vect[0] > vect[1])
         small_diff = vect[0] - vect[1];
     if (vect[0] < vect[1])

@@ -6,7 +6,7 @@
 /*   By: ahaddad <ahaddad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 12:40:29 by ahaddad           #+#    #+#             */
-/*   Updated: 2021/07/06 20:10:59 by ahaddad          ###   ########.fr       */
+/*   Updated: 2021/07/07 20:16:28 by ahaddad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int main()
     }
     if (easyfind(v, 0) == 0)
     {
-        std::cout << "there is the element on the vecotr" << std::endl;
+        std::cout << "element found" << std::endl;
     }
     else
-        std::cout << "there is not  element in the vecotr" << std::endl;
+        std::cout << "element not found" << std::endl;
     return 0;
 }
